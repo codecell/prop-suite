@@ -1,0 +1,35 @@
+$primary: #00aced;
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1.2px solid lightslategray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  padding-top: 1.5em;
+  padding-right: 4%;
+  padding-left: 4%;
+
+  .space {
+    flex: 1;
+  }
+  .navbar-link {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 4px;
+    color: rgba(0, 0, 0, 0.63);
+
+    &:hover {
+      border-bottom: 2px solid $primary;
+    }
+  }
+
+  .auth-links-area {
+
+  }
+}

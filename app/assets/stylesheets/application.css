@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat";
+}
+
+body {
+  position: relative;
+}
+
+.alert-success, .alert-danger {
+  width: 25%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.alert-danger {
+  background-color: tomato;
+}

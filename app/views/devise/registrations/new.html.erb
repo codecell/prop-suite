@@ -1,0 +1,44 @@
+
+<div class="bg">
+
+  <section class ='auth-form'>
+    <h2> <i class="fas fa-user-circle user-icon"></i> </h2>
+    <h2 class ='form-label'>Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.text_field :username, autofocus: true, :placeholder => "Username",
+        :class => "text-field" %>
+      </div>
+
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",
+        :placeholder => "Email",
+        :class => "text-field"
+        %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :phone, autofocus: true, 
+        :placeholder => "Phone", :class => "text-field" %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "new-password",
+         :placeholder => "Password (6 characters minimum)", :class => "text-field" %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",
+        :placeholder => "Confirm Password", :class => "text-field" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up", :class => "btn-auth" %>
+      </div>
+    <% end %>
+    <p>Already signed up? <%= render "devise/shared/links" %> </p>
+  </section>
+
+</div>
