@@ -8,6 +8,9 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 gem 'devise'
 gem 'pg'
 gem "table_print"
+gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave'
 gem 'rubocop', '~>0.81.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

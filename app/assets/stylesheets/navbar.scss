@@ -1,13 +1,14 @@
-$primary: #00aced;
+$primary: #53A7E8;
+$custom_white: #cac5c5;
+$borderColor: #DBDBDB;
 
 .navbar {
-  width: 100%;
+  width: 80%;
   height: 80px;
-  background-color: #fff;
-  border-bottom: 1.2px solid lightslategray;
+  background-color: $primary;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   padding-top: 1.5em;
@@ -25,11 +26,54 @@ $primary: #00aced;
     color: rgba(0, 0, 0, 0.63);
 
     &:hover {
-      border-bottom: 2px solid $primary;
+      border-bottom: 2px solid $custom_white;
     }
   }
 
   .auth-links-area {
+    display: flex;
+  }
+}
 
+.logo {
+  font-weight: bold;
+  color: #eeffee;
+  text-decoration: underline;
+  font-size: 1.5em;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  padding-bottom: 10%;
+  margin-right: 5%;
+
+  span {
+    background-color: #eeffee;
+    height: 35px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      color: #555;
+    }
+  }
+
+  input {
+    height: 35px;
+    border: none;
+    padding-left: 10%;
+    background-color: #efefef;
+    font-size: 0.9em;
+
+    &:focus {
+      outline: none;
+    }
   }
 }

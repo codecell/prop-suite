@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="logo">PropSuite</div>
+  <div class="space"></div>
+  <div class="auth-links-area">
+    <% if user_signed_in? %>
+      <div class="search-container">
+        <input placeholder="Search For A Property" />
+        <span><i class="fas fa-search"></i></span>
+      </div>
+      <span><i class="fas fa-bell"></i></span>
+
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    <% end %>
+  </div>
+</nav>

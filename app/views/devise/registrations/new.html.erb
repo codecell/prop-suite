@@ -13,6 +13,11 @@
       </div>
 
       <div class="field">
+        <%= f.text_field :fullname, autofocus: true, :placeholder => "Full Name",
+        :class => "text-field" %>
+      </div>
+
+      <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "email",
         :placeholder => "Email",
         :class => "text-field"

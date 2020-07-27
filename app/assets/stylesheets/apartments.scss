@@ -1,0 +1,118 @@
+// Place all the styles related to the Apartments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$custom_white: #cac5c5;
+$borderColor: #DBDBDB;
+$darkText: #555;
+$primary: #53A7E8;
+
+.apartment-container, .user-details-container {
+  background-color: #efefef;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  min-height: 100vh;
+  width: 80%;
+  color: $darkText;
+  display: flex;
+}
+
+.user-details-container {
+  display: block;
+}
+
+// <<<<<<< MID SECTION >>>
+.main-apartment-showcase,
+.main-user-details-showcase {
+  width: 75%;
+
+  .smaller-topbar {
+    height: 50px;
+    border-bottom: 1.2px solid $borderColor;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.smaller-topbar-link {
+  color: $darkText;
+  margin-left: 4%;
+  height: 100%;
+  font-size: 0.9em;
+  padding-top: 1em;
+
+  &:hover {
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.new-apartment-form-container {
+  width: 90%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 2.5%;
+
+  .new-apartment-field {
+    height: 45px;
+    border: 1.2px solid $borderColor;
+    border-radius: 3px;
+    width: 100%;
+    margin-top: 1%;
+    font-size: 0.9em;
+    padding-left: 1.5em;
+  }
+
+  .file-field {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+}
+
+.btn-apartment {
+  width: 60%;
+  padding: 13px 20px;
+  margin: 3% 20%;
+  color: #fff;
+  background-color: $primary;
+  border-radius: 3px;
+  border: 1.2px solid $primary;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 500ms;
+
+  &:hover {
+    transform: scaleX(1.2);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// <<<<<<<< RIGHT BAR >>>>>>>>>
+.right-bar,
+.user_rightbar {
+  width: 25%;
+  border-left: 1.2px solid $borderColor;
+
+  .right-bar-header {
+    height: 50px;
+    border-bottom: 1.2px solid $borderColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+
+  .who-to-follow-item {
+    display: flex;
+    align-items: center;
+    padding: 4%;
+
+    .user-icon {
+      font-size: 3em;
+      margin-right: 4%;
+    }
+  }
+}

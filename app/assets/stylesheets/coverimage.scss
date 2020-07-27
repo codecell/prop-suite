@@ -1,0 +1,81 @@
+$borderColor: #DBDBDB;
+
+.cover-image-container {
+  width: 100%;
+  height: 250px;
+  border-bottom: 1.2px solid $borderColor;
+  display: flex;
+  
+  .image-frame {
+    width: 75%;
+    height: 100%;
+    background-color: #c0baba;
+
+    .cover-photo {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background-position: center center;
+    }
+  }
+
+  .show-user-details {
+    width: 25%;
+    height: 100%;
+    border-left: 1.2px solid $borderColor;
+  }
+}
+
+// <<<<<< USER SHOW PAGE show-user-details zone >>>>>>
+.user-show-avatar-zone {
+  height: 80%;
+  width: 100%;
+  border-bottom: 1.2px solid $borderColor;
+}
+
+.show-avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  .plus-icon {
+    color: $borderColor;
+    font-size: 2em;
+  }
+
+  .user-icon {
+    font-size: 5.5em;
+    color: $borderColor;
+    margin-left: 8%;
+  }
+
+  .user-show-avatar {
+    height: 5.5em;
+    width: 5.5em;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-left: 8%;
+  }
+}
+
+.dashbord-followers-zone {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1.2px solid $borderColor;
+    width: 33.33%;
+    height: 100%;
+
+    p {
+      font-size: 15px;
+    }
+  }
+}

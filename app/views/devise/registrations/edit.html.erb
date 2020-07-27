@@ -1,43 +1,111 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="bg">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  <div class="edit-user-canvas">
+  
+    <h2>Edit Profile</h2>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+
+      <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="avatar-container">
+          <% if current_user.avatar.url.present? %>
+            <%= image_tag(current_user.avatar.url, :class => "profile-avatar") %><br />
+            <%= f.label :remove_avatar do %>
+              <%= f.check_box :remove_avatar %>
+            <% end %>
+          <% end %>
+          <%= f.label :change_display_picture_? %>
+          <%= f.file_field :avatar %>
+          <%= f.hidden_field :avatar_cache %>
+        </div>
+
+        <div class="coverphoto-field">
+          <% if current_user.coverphoto.url.present? %>
+            <%= image_tag(current_user.coverphoto.url, :class => "profile-coverphoto-min") %><br />
+            <%= f.label :remove_coverphoto do %>
+              <%= f.check_box :remove_coverphoto %>
+            <% end %>
+          <% end %>
+          <%= f.label :change_coverphoto_? %>
+          <%= f.file_field :coverphoto %>
+          <%= f.hidden_field :coverphoto_cache %>
+        </div>
+
+        <div class="edit-profile-field">
+          <%= f.label :username %>
+          <%= f.text_field :username, autofocus: true, :placeholder => "Username",
+          :class => "profile-text-field" %>
+        </div>
+
+        <div class="edit-profile-field">
+          <%= f.label :fullname %>
+          <%= f.text_field :fullname, autofocus: true, :placeholder => "Full Name",
+          :class => "profile-text-field" %>
+        </div>
+
+        <div class="edit-profile-field">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",
+          :placeholder => "Email",
+          :class => "profile-text-field"
+          %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="edit-profile-field">
+          <%= f.label :phone %>
+          <%= f.text_field :phone, autofocus: true, 
+          :placeholder => "Phone", :class => "profile-text-field" %>
+        </div>
+
+        <div class="edit-profile-field">
+          <div class="dual-content">
+            <%= f.label :password %><br />
+            <small>(leave blank if you don't want to change it)</small>
+          </div>
+          <%= f.password_field :password, autocomplete: "new-password",
+          :placeholder => "New Password (6 characters minimum)", :class => "profile-text-field" %>
+        </div>
+
+        <div class="edit-profile-field">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password",
+          :placeholder => "Confirm New Password", :class => "profile-text-field" %>
+        </div>
+
+        <div class="edit-profile-field">
+          <div class="dual-content">
+            <%= f.label :current_password %><br />
+            <small>(we need your current password to confirm your changes)</small>
+          </div> 
+          <%= f.password_field :current_password, autocomplete: "current-password",
+          :placeholder => "Current Password", :class => "profile-text-field" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Update", :class => "btn-auth" %>
+        </div>
     <% end %>
+
+    <div class="delete-account-zone">
+      <h3>Delete my account</h3>
+
+      <p>
+        Unhappy? 
+        <%= button_to "Delete my account",
+         registration_path(resource_name), data: { confirm: "Are you sure?" },
+          method: :delete, :class => "btn-destroy" %>
+      </p>
+    </div>
+
+
+    <%= link_to "Back", :back %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

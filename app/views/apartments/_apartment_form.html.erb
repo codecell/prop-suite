@@ -1,0 +1,14 @@
+<div class="new-apartment-form-container">
+  <h3><span><i class="fas fa-plus-circle"></i></span> ADD AN APARTMENT</h3>
+  <%= form_for Apartment.new, :url => apartments_path do |f| %>
+    <%= f.file_field :photos, class: "file-field"  %><br/>
+    <%= f.text_field :category, 
+      placeholder: "Add Category (Self Contain or Mini-flat or N-bed flat)",
+      class: "new-apartment-field" 
+    %><br/>
+    <%= f.text_field :address, placeholder: "Address", class: "new-apartment-field" %><br/>
+    <%= f.text_field :price, placeholder: "Price", class: "new-apartment-field" %><br/>
+
+    <%= f.submit "SUBMIT APARTMENT", class: "btn-apartment"%>
+  <% end %>
+</div>

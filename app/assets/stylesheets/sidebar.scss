@@ -1,0 +1,75 @@
+$primary: #53A7E8;
+$custom_white: #cac5c5;
+
+.sidebar-container {
+  min-height: 120vh;
+  background-color: #213346;
+  width: 20%;
+  color: $custom_white;
+
+  div {
+    margin-bottom: 7%;
+  }
+}
+
+.avatar-zone {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5em;
+
+  .avatar-frame {
+    background-color: #efefef;
+    border-radius: 3px;
+    height: 6em;
+    width: 6em;
+    margin-right: 4%;
+    margin-top: 8%;
+  }
+}
+
+.followers-zone {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    text-align: center;
+  }
+}
+
+.nav-zone {
+  width: 100%;
+
+  ul {
+    list-style: none;
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+    padding-left: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    i {
+      margin-right: 10px;
+    }
+
+    a {
+      color: $custom_white;
+    }
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+.current-user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

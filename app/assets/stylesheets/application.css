@@ -20,6 +20,18 @@
   font-family: "montserrat";
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus {
+  outline: none;
+}
+
 body {
   position: relative;
 }
@@ -32,8 +44,9 @@ body {
   text-align: center;
   color: #fff;
   position: absolute;
-  top: 20%;
+  top: 10%;
   right: 2%;
+  z-index: 220;
 }
 
 .alert-success {

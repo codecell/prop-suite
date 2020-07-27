@@ -1,0 +1,89 @@
+$custom_white: #cac5c5;
+$borderColor: #DBDBDB;
+
+//  <<<<<<< EDIT USER PAGE >>>>>
+.profile-avatar {
+  width: 6em;
+  height: 6em;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.edit-user-canvas {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #efefef;
+  padding: 3%;
+  border-radius: 3px;
+}
+
+.edit-profile-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .dual-content {
+    text-align: left;
+  }
+}
+
+.coverphoto-field {
+  display: flex;
+  align-items: center;
+  margin: 3% 0;
+
+  input {
+    margin-left: 3%;
+  }
+
+  .profile-coverphoto-min {
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+    margin-right: 3%;
+  }
+}
+
+.avatar-container {
+  margin: 1em auto;
+}
+
+.profile-text-field {
+  height: 45px;
+  padding-left: 2%;
+  border: 1.2px solid $borderColor;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 60%;
+}
+
+// <<<<<< DELETE ACCOUNT ZONE >>>>>>>
+.delete-account-zone {
+  text-align: left;
+  margin: 2% 0;
+
+  h3 {
+    color: tomato;
+  }
+
+  .btn-destroy {
+    background-color: tomato;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 3px;
+    border: 1.2px solid tomato;
+    font-size: 16px;
+    margin: 2% auto;
+    cursor: pointer;
+    transition: 300ms;
+    font-weight: bold;
+
+  &:hover {
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+    transform: scaleX(1.03);
+  }
+  }
+}

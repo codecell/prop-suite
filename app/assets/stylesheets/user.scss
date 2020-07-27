@@ -1,14 +1,14 @@
-$primary: #00aced;
+$primary: #53A7E8;
+$borderColor: #DBDBDB;
+//  #00aced;
 
 .bg {
   background-color: $primary;
   min-height: 100vh;
   width: 100%;
-  margin-top: -1%;
-  padding-top: 2%;
   text-align: center;
   color: rgba(0, 0, 0, 0.63);
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .auth-form {
@@ -25,9 +25,6 @@ $primary: #00aced;
   }
 }
 
-.field {
-  
-}
 
 .form-label {
   margin: 2% auto;
@@ -36,7 +33,7 @@ $primary: #00aced;
 .text-field {
   height: 45px;
   padding-left: 2%;
-  border: 1.2px solid #DBDBDB;
+  border: 1.2px solid $borderColor;
   border-radius: 3px;
   margin: 5px auto;
   width: 50%;
@@ -63,4 +60,10 @@ $primary: #00aced;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
     transform: scaleX(1.03);
   }
+}
+
+// <<<<<<<<< USER SHOW PAGE>>>>>>
+
+.details-wrapper {
+  display: flex;
 }
