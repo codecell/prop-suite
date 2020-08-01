@@ -77,11 +77,13 @@ $customNavy: #213346;
 
 // <<<<<<< APARTMENTS SHOWCASE >>>>>
 
-.apartment-unit {
+.apartmentphotos-frame {
+  display: flex;
   border: 1px solid $borderColor;
-  border-radius: 2px;
+  height: 300px;
   width: 100%;
-  margin: 3% auto;
+  border-radius: 2px;
+  margin: 3% auto 0.5%;  
 }
 
 .apartment-unit-details {
@@ -113,11 +115,5 @@ $customNavy: #213346;
   height: auto;
   width: 50%;
   object-fit: contain;
-}
-
-.apartmentphotos-frame {
-  display: flex;
-  height: 300px;
-  width: 100%;
 }
 

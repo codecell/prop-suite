@@ -3,15 +3,6 @@ module SearchesHelper
     params.require(:search).permit(:category, :min_price, :max_price, :address)
   end
 
-  # li = content_tag :li do
-  #   img = image_tag avatar_url_helper(actors.first)
-  #   div = content_tag :div, class: "notification_content" do 
-  #     # some content that is rendered correctly
-  #   end
-  #   img + div
-  # end
-  # puts "<<<<AAP #{ap.apartment_attachments[0].apartmentphoto.url}"
-
   def print_search_result
     if @search.apartments
       

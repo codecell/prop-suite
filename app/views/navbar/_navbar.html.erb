@@ -1,5 +1,7 @@
 <nav class="navbar">
-  <div class="logo">PropSuite</div>
+  <%= link_to root_path do %>
+    <div class="logo">PropSuite</div>
+  <% end %>
   <div class="space"></div>
   <div class="auth-links-area">
     <% if user_signed_in? %>

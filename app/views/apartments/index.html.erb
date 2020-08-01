@@ -6,40 +6,8 @@
     <%= render 'layouts/smaller_topbar' %>
     <div class="main-apartment-showcase">
       <%= render 'apartment_form' %>
-      <div class="show-apartments">
-        
-        <% @apartments && @apartments.each do |rental| %>
-          <div class="apartment-unit">
-            <% if rental.apartment_attachments.count.positive? %>
-              <div class="apartmentphotos-frame">
-                <% rental.apartment_attachments.each do |pic| %>
-                  <%= cl_image_tag(pic.apartmentphoto.url,
-                  :width=>300, :height=>100, :fetch_format=>:auto, :quality=>"auto",
-                  :use_root_path=>true,
-                  :class => "apartment-image") 
-                  %>
-                <% end %>
-              </div>  
-            <% end %>
 
-            <div class="apartment-unit-details">
-              <small>
-                Address: <span class="detail-var"><%= rental.address %></span>
-              </small>
-              <small>
-                Category: <span class="detail-var"><%= rental.category %></span>
-              </small>
-              <small>
-                Price: <span class="detail-var"><%= rental.price %></span>
-               </small>
-              <small>
-                Agent: <span class="detail-var"><%= rental.agent_id %></span>
-              </small>
-              <small><%= link_to 'Details', apartment_path(rental) %></small>
-            </div>
-          </div>
-        <% end %>
-      </div>     
+      <%= show_apartments %>   
     </div>
   </main>
 
