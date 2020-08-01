@@ -6,8 +6,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :apartments, foreign_key: 'agent_id', class_name: 'Apartment'
-  has_many :pictures, :as => :imageable
+  has_many :apartments, foreign_key: 'agent_id', class_name: 'Apartment', dependent: :destroy
+
+  # file size validations
+  validate :avatar_size_validation
+  validate :coverphoto_size_validation
 
   # User Avatar Validation
   validates_integrity_of  :avatar
@@ -23,6 +26,6 @@ class User < ApplicationRecord
   end
 
   def coverphoto_size_validation
-    errors[:coverphoto] << "should be less than 500KB" if coverphoto.size > 1.megabytes
+    errors[:coverphoto] << "should be less than 1000KB(1mb)" if coverphoto.size > 1.megabytes
   end
 end

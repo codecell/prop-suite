@@ -1,0 +1,43 @@
+<div class="apartment-details-page">
+    <div class= "apartment-prev-page-link">
+      <i class="fa fa-arrow-left"></i>
+      <%= link_to "Previous page", :back %>
+    </div>
+
+    <div class="showpage-apartment-unit">
+      <% if @apartment.apartment_attachments.count.positive? %>
+        <div class="showpage-apartmentphotos-frame">
+          <% @apartment.apartment_attachments.each do |pic| %>
+            <%= cl_image_tag(pic.apartmentphoto.url,
+            :width=>400, :height=>100, :fetch_format=>:auto, :quality=>"auto",
+            :use_root_path=>true,
+            :class => "apartment-image") 
+            %>
+          <% end %>
+        </div>  
+      <% end %>
+
+      <div class="showpage-apartment-unit-details">
+        <small>
+          Address: <span><%= @apartment.address %></span>
+        </small>
+        <small>
+          Category: <span><%= @apartment.category %></span>
+        </small>
+        <small>
+          Price: <span><%= @apartment.price %></span>
+          </small>
+        <small>
+          Agent: <span><%= @apartment.agent_id %></span>
+        </small>
+        <small>
+          Phone: <span><%= @apartment.agent_id %></span>
+        </small>
+        <small>
+          <i class="fa fa-arrow-left"></i>
+          <%= link_to "Previous page", :back %>
+        </small>
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+$custom_white: #cac5c5;
+$borderColor: #DBDBDB;
+$darkText: #555;
+$primary: #53A7E8;
+$offwhite: #efefef;
+
+// <<<<<<<< RIGHT BAR >>>>>>>>>
+.right-bar,
+.user_rightbar {
+  width: 20%;
+  border-left: 1.2px solid $borderColor;
+  background-color: $offwhite;
+  color: $darkText;
+  position: fixed;
+  height: 100vh;
+  right: 0;
+
+  .right-bar-header {
+    height: 50px;
+    border-bottom: 1.2px solid $borderColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+
+  .who-to-follow-item {
+    display: flex;
+    align-items: center;
+    padding: 4%;
+
+    .user-icon {
+      font-size: 3em;
+      margin-right: 4%;
+    }
+  }
+}
+
+.right-bar {
+  top: 80px;
+}
+
+.user_rightbar {  
+  top: 330px;
+}

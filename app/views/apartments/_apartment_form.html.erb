@@ -1,7 +1,12 @@
 <div class="new-apartment-form-container">
   <h3><span><i class="fas fa-plus-circle"></i></span> ADD AN APARTMENT</h3>
-  <%= form_for Apartment.new, :url => apartments_path do |f| %>
-    <%= f.file_field :photos, class: "file-field"  %><br/>
+  <%= form_for Apartment.new, :html => {multipart: true }, :url => apartments_path do |f| %>
+
+
+    <%= f.file_field :apartment_attachments, :multiple => true,
+    name: "apartment_attachments[apartmentphoto][]",
+      class: "file-field" %>
+
     <%= f.text_field :category, 
       placeholder: "Add Category (Self Contain or Mini-flat or N-bed flat)",
       class: "new-apartment-field" 

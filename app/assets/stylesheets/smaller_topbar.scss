@@ -1,0 +1,34 @@
+// <<<<<< SMALLER TOPBAR >>>>
+$custom_white: #cac5c5;
+$borderColor: #DBDBDB;
+$darkText: #555;
+$primary: #53A7E8;
+$offwhite: #efefef;
+
+.smaller-topbar, .user-page-smaller_topbar {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  left: 20%;
+  top: 80px;
+  border-bottom: 1.2px solid $borderColor;
+  background-color: $offwhite;
+  display: flex;
+  align-items: center;
+}
+
+.user-page-smaller_topbar {
+  top: 330px;
+}
+
+.smaller-topbar-link {
+  color: $darkText;
+  margin-left: 4%;
+  height: 100%;
+  font-size: 0.9em;
+  padding-top: 1em;
+
+  &:hover {
+    border-bottom: 2px solid $primary;
+  }
+}

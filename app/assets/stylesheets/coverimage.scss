@@ -1,10 +1,16 @@
 $borderColor: #DBDBDB;
+$offwhite: #efefef;
+$darkText: #555;
 
 .cover-image-container {
-  width: 100%;
+  width: 80%;
   height: 250px;
   border-bottom: 1.2px solid $borderColor;
   display: flex;
+  position: fixed;
+  top: 80px;
+  left: 20%;
+  z-index: 100;
   
   .image-frame {
     width: 75%;
@@ -23,6 +29,8 @@ $borderColor: #DBDBDB;
     width: 25%;
     height: 100%;
     border-left: 1.2px solid $borderColor;
+    background-color: $offwhite;
+    color: $darkText;
   }
 }
 

@@ -1,0 +1,33 @@
+<div class = "bg">
+
+  <div class ="search-form-wrapper">
+    <div class= "apartment-prev-page-link">
+      <i class="fa fa-arrow-left"></i>
+      <%= link_to "Previous page", :back %>
+    </div>
+
+    <h1>Search for an Apartment</h1>
+    <small>All fields are optional, search by 1 or more fields</small>
+
+    <div class='search-form'>
+      <%= form_for @search do |f| %>
+        <div class="search-field">
+          <%= f.label :category %><br />
+          <%= f.text_field :category, placeholder: 'mini-flat, self contain, 3 bed room , or ...'  %>
+        </div>
+        <div class="search-field">
+          <%= f.label :area %><br />
+          <%= f.text_field :address, placeholder: 'Enter Desired Location' %>
+        </div>
+        <div class="search-field">
+          <%= f.label :min_price, "Price Range", class: "price-label" %><br />
+          <div class="price-tags-area">
+            <%= f.text_field :min_price, placeholder: '$$$' %> -
+            <%= f.text_field :max_price, placeholder: '$$$' %>
+          </div>
+        </div>
+        <div class="actions"><%= f.submit "Search", class: "btn-search" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>

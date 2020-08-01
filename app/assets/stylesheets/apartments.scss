@@ -5,45 +5,28 @@ $custom_white: #cac5c5;
 $borderColor: #DBDBDB;
 $darkText: #555;
 $primary: #53A7E8;
+$offwhite: #efefef;
+$customNavy: #213346;
 
 .apartment-container, .user-details-container {
-  background-color: #efefef;
+  background-color: $offwhite;
   position: absolute;
-  top: 80px;
-  right: 0;
+  top: 130px;
+  left: 20%;
   min-height: 100vh;
-  width: 80%;
+  width: 60%;
   color: $darkText;
-  display: flex;
 }
 
 .user-details-container {
   display: block;
 }
 
+
 // <<<<<<< MID SECTION >>>
 .main-apartment-showcase,
 .main-user-details-showcase {
-  width: 75%;
-
-  .smaller-topbar {
-    height: 50px;
-    border-bottom: 1.2px solid $borderColor;
-    display: flex;
-    align-items: center;
-  }
-}
-
-.smaller-topbar-link {
-  color: $darkText;
-  margin-left: 4%;
-  height: 100%;
-  font-size: 0.9em;
-  padding-top: 1em;
-
-  &:hover {
-    border-bottom: 2px solid $primary;
-  }
+  width: 100%;
 }
 
 .new-apartment-form-container {
@@ -51,6 +34,7 @@ $primary: #53A7E8;
   background-color: #fff;
   margin: 0 auto;
   padding: 2.5%;
+  margin-top: 3%;
 
   .new-apartment-field {
     height: 45px;
@@ -90,29 +74,50 @@ $primary: #53A7E8;
   }
 }
 
-// <<<<<<<< RIGHT BAR >>>>>>>>>
-.right-bar,
-.user_rightbar {
-  width: 25%;
-  border-left: 1.2px solid $borderColor;
 
-  .right-bar-header {
-    height: 50px;
-    border-bottom: 1.2px solid $borderColor;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
+// <<<<<<< APARTMENTS SHOWCASE >>>>>
 
-  .who-to-follow-item {
-    display: flex;
-    align-items: center;
-    padding: 4%;
-
-    .user-icon {
-      font-size: 3em;
-      margin-right: 4%;
-    }
-  }
+.apartment-unit {
+  border: 1px solid $borderColor;
+  border-radius: 2px;
+  width: 100%;
+  margin: 3% auto;
 }
+
+.apartment-unit-details {
+  display: flex;
+
+    small {
+      padding: 5px;
+      min-width: 20px;
+      text-align: center;
+      border-radius: 2px;
+      background-color: #fff;
+      margin: 10px;
+      font-size: 15px;
+    }
+
+    .detail-var {
+      color: rgba(0, 0, 0, 0.92);
+      margin-left: 6px;
+    }
+
+    a {
+      color: $primary;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+}
+
+.apartment-image {
+  height: auto;
+  width: 50%;
+  object-fit: contain;
+}
+
+.apartmentphotos-frame {
+  display: flex;
+  height: 300px;
+  width: 100%;
+}
+

@@ -3,10 +3,6 @@
   <div class="space"></div>
   <div class="auth-links-area">
     <% if user_signed_in? %>
-      <div class="search-container">
-        <input placeholder="Search For A Property" />
-        <span><i class="fas fa-search"></i></span>
-      </div>
       <span><i class="fas fa-bell"></i></span>
 
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>

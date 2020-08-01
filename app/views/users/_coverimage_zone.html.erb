@@ -1,18 +1,26 @@
 <div class="cover-image-container">
   <div class="image-frame">
     <% if @user.coverphoto.url.present? %>
-      <%= image_tag(@user.coverphoto.url, :class => "cover-photo", :alt => "cover photo") %>
+      <%= cl_image_tag(@user.coverphoto.url, :height=>250,
+       :fetch_format=>:auto, :quality=>"auto", :use_root_path=>true,
+       :class => "cover-photo", :alt => "cover photo") %>
     <% end %>
-</div>
+  </div>
   <div class="show-user-details">
     <div class="user-show-avatar-zone">
       <div class="show-avatar-wrapper">
           <i class="fas fa-plus-circle plus-icon"></i>
 
           <% if @user.avatar.url.present? %>
-            <%= image_tag(@user.avatar.url, :class => "user-show-avatar") %>
+            <%= cl_image_tag(@user.avatar.url, :width=>88, :height=>88,
+             :fetch_format=>:auto, :quality=>"auto",
+             :use_root_path=>true,
+             :class => "user-show-avatar") %>
+
           <% else %>
-            <i class="fas fa-user-circle user-icon">            
+            <div>
+              <i class="fas fa-user-circle user-icon"></i>
+            </div>          
           <% end %>        
       </div>
     </div>

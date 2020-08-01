@@ -2,6 +2,27 @@ $custom_white: #cac5c5;
 $borderColor: #DBDBDB;
 
 //  <<<<<<< EDIT USER PAGE >>>>>
+.prev-page-link {
+  display: flex;
+  align-items: center;
+
+  .fa {
+    margin-right: 5px;
+  }
+}
+
+.user-icon{
+  font-size: 6em;
+  color: $borderColor;
+  margin-bottom: 1%;
+}
+
+.prev-page-link-base {
+  .fa {
+    margin-right: 5px;
+  }
+}
+
 .profile-avatar {
   width: 6em;
   height: 6em;

@@ -14,6 +14,7 @@ $borderColor: #DBDBDB;
   padding-top: 1.5em;
   padding-right: 4%;
   padding-left: 4%;
+  border-bottom: 1.2px solid $borderColor;
 
   .space {
     flex: 1;
@@ -42,38 +43,4 @@ $borderColor: #DBDBDB;
   font-size: 1.5em;
   display: flex;
   flex-shrink: 0;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  padding-bottom: 10%;
-  margin-right: 5%;
-
-  span {
-    background-color: #eeffee;
-    height: 35px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    i {
-      color: #555;
-    }
-  }
-
-  input {
-    height: 35px;
-    border: none;
-    padding-left: 10%;
-    background-color: #efefef;
-    font-size: 0.9em;
-
-    &:focus {
-      outline: none;
-    }
-  }
 }

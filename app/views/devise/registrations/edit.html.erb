@@ -2,7 +2,11 @@
 <div class="bg">
 
   <div class="edit-user-canvas">
-  
+    <div class= "prev-page-link">
+      <i class="fa fa-arrow-left"></i>
+      <%= link_to "Previous page", :back %>
+    </div>
+
     <h2>Edit Profile</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -16,6 +20,10 @@
             <%= f.label :remove_avatar do %>
               <%= f.check_box :remove_avatar %>
             <% end %>
+          <% else %>
+            <div>
+              <i class="fa fa-user-circle user-icon"></i>
+            </div>
           <% end %>
           <%= f.label :change_display_picture_? %>
           <%= f.file_field :avatar %>
@@ -105,7 +113,10 @@
     </div>
 
 
-    <%= link_to "Back", :back %>
+    <div class= "prev-page-link-base">
+      <i class="fa fa-arrow-left"></i>
+      <%= link_to "Previous page", :back %>
+    </div>
   </div>
 
 </div>

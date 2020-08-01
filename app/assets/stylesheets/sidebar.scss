@@ -1,9 +1,13 @@
 $primary: #53A7E8;
 $custom_white: #cac5c5;
+$customNavy: #213346;
 
 .sidebar-container {
-  min-height: 120vh;
-  background-color: #213346;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $customNavy;
   width: 20%;
   color: $custom_white;
 
