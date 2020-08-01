@@ -7,7 +7,7 @@
     </div>
 
     <h1>Search for an Apartment</h1>
-    <small>All fields are optional, search by 1 or more fields</small>
+    <small><span class="search-asterist">*</span>All fields are optional, search by 1 or more fields</small>
 
     <div class='search-form'>
       <%= form_for @search do |f| %>
@@ -20,10 +20,10 @@
           <%= f.text_field :address, placeholder: 'Enter Desired Location' %>
         </div>
         <div class="search-field">
-          <%= f.label :min_price, "Price Range", class: "price-label" %><br />
+          <%= f.label :min_price, "Price Range($)", class: "price-label" %><br />
           <div class="price-tags-area">
-            <%= f.text_field :min_price, placeholder: '$$$' %> -
-            <%= f.text_field :max_price, placeholder: '$$$' %>
+            <%= f.text_field :min_price, placeholder: 'Min price' %> -
+            <%= f.text_field :max_price, placeholder: 'Max price' %>
           </div>
         </div>
         <div class="actions"><%= f.submit "Search", class: "btn-search" %></div>

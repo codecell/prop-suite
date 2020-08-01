@@ -1,12 +1,18 @@
 
 <div class="search-results-container">
-  <div class= "apartment-prev-page-link">
+  <div class= "apartment-prev-page-link search-result-page-navs">
     <i class="fa fa-arrow-left"></i>
     <%= link_to "Previous page", :back %>
-    <%= link_to "Home", root_path %>
+    <%= link_to "Home", root_path, class: "home-link" %>
   </div>
-  
+
    <h1>Search Results</h1>
 
     <%= print_search_result %>
+
+  <div class= "apartment-prev-page-link search-result-page-navs">
+    <i class="fa fa-arrow-left"></i>
+    <%= link_to "Previous page", :back %>
+    <%= link_to "Home", root_path, class: "home-link" %>
+  </div>
 </div>

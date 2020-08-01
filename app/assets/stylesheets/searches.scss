@@ -3,10 +3,17 @@ $darkText: #555;
 $primary: #53A7E8;
 $offwhite: #efefef;
 
+//  <<<<<< NEW SEARCH STYLES(form page) >>>>>
 .search-page-container {
   text-align: center;
   width: 100%;
 }
+
+.search-asterist {
+  color: tomato;
+  font-size: 1.5em;
+}
+
 .search-form-wrapper {
   width: 80%;
   background-color:$offwhite;
@@ -62,8 +69,8 @@ $offwhite: #efefef;
 }
 
 .btn-search {
-  height: 38px;
-  min-width: 40%;
+  height: 40px;
+  min-width: 60%;
   color: #555;
   font-weight: bold;
   border: none;
@@ -74,7 +81,7 @@ $offwhite: #efefef;
   font-size: 1em;
   color: #fff;
   cursor: pointer;
-  margin: 3% auto;
+  margin: 6% auto;
   transition: 250ms;
 
   &:hover {
@@ -83,6 +90,14 @@ $offwhite: #efefef;
 }
 
 // <<<<<<<< SEARCH RESULTS PAGE >>>>>>>>>
+.search-result-page-navs {
+  margin-bottom: 3%;
+
+  .home-link {
+    margin-left: 2%;
+  }
+}
+
 .search-results-container {
   padding: 4% 5% 0;
 }
