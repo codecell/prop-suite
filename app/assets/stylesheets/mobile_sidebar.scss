@@ -1,0 +1,33 @@
+$custom_white: #cac5c5;
+$customNavy: #213346;
+
+.mobile-sidebar-container {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 80px;
+  background-color: $customNavy;
+  width: 80%;
+  color: $custom_white;
+  padding-left: 6%;
+  padding-top: 12%;
+  z-index: 200;
+
+  div {
+    margin-bottom: 7%;
+  }
+
+  @media (min-width: 64em) {
+    display: none;
+  }
+}
+
+.mobile-followers-zone {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    text-align: center;
+  }
+}

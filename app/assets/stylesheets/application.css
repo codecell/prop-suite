@@ -57,3 +57,19 @@ body {
 .alert-danger {
   background-color: tomato;
 }
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}

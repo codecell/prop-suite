@@ -1,4 +1,14 @@
 <div class="smaller-topbar">
+
+  <div data-controller="newapartment" class= "smaller-topbar-link">
+    <button
+      class="btn-data-action-new-apartment"
+      data-action="click->newapartment#openapartmentform"
+    >ADD NEW APARTMENT</button>
+      <span data-target="newapartment.toggleapartmentform" class="d-none">
+        <%= render 'apartment_form' %>
+      </span>
+  </div>
   <%= link_to 'LATEST DEALS', apartments_path, class: "smaller-topbar-link" %>
   <%= link_to 'CUSTOMER SUPPORT', apartments_path, class: "smaller-topbar-link" %> 
   <%= link_to "SEARCH APARTMENTS", new_search_path, class: "smaller-topbar-link" %>

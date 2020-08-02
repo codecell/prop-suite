@@ -8,20 +8,26 @@ $primary: #53A7E8;
 $offwhite: #efefef;
 $customNavy: #213346;
 
-.apartment-container, .user-details-container {
+// <<<<<< APARTMENTS INDEX PAGE >>>>>>>>
+
+.apartment-container, .user-details-container {  
   background-color: $offwhite;
   position: absolute;
   top: 130px;
-  left: 20%;
+  left: 0%;
   min-height: 100vh;
-  width: 60%;
+  width: 100%;
   color: $darkText;
+
+  @media (min-width: 64em) {
+    width: 60%;
+    left: 20%;
+  }
 }
 
 .user-details-container {
   display: block;
 }
-
 
 // <<<<<<< MID SECTION >>>
 .main-apartment-showcase,
@@ -30,11 +36,12 @@ $customNavy: #213346;
 }
 
 .new-apartment-form-container {
-  width: 90%;
+  width: 80%;
   background-color: #fff;
   margin: 0 auto;
   padding: 2.5%;
   margin-top: 3%;
+  border: 1.2px solid $borderColor;
 
   .new-apartment-field {
     height: 45px;

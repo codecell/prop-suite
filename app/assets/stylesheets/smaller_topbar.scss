@@ -9,12 +9,16 @@ $offwhite: #efefef;
   height: 50px;
   width: 100%;
   position: fixed;
-  left: 20%;
+  left: 0;
   top: 80px;
   border-bottom: 1.2px solid $borderColor;
   background-color: $offwhite;
   display: flex;
   align-items: center;
+
+  @media (min-width: 64em) {
+    left: 20%;
+  }
 }
 
 .user-page-smaller_topbar {
@@ -23,12 +27,26 @@ $offwhite: #efefef;
 
 .smaller-topbar-link {
   color: $darkText;
-  margin-left: 4%;
+  margin-left: 2%;
   height: 100%;
   font-size: 0.9em;
   padding-top: 1em;
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   &:hover {
     border-bottom: 2px solid $primary;
   }
+}
+
+
+
+.btn-data-action-new-apartment {
+  padding: 5px;
+  height: 40px;
+  margin-top: 5px;
+  border: 1.2px solid $borderColor;
+  font-size: 1em;
 }

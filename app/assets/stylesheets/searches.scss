@@ -7,6 +7,10 @@ $offwhite: #efefef;
 .search-page-container {
   text-align: center;
   width: 100%;
+  background-color: $primary;
+  height: 100vh;
+  padding-top: 10%;
+  color: $darkText;
 }
 
 .search-asterist {

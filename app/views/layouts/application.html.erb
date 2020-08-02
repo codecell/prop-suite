@@ -18,6 +18,9 @@
   </head>
 
   <body>
+    <div>
+      <%= render 'navbar/mobile_nav' %>
+    </div>
 
       <% if notice %>
             <div class="alert-success">
@@ -31,6 +34,7 @@
         </div>
       <% end %>
 
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
     <%= yield %>
   </body>
 </html>

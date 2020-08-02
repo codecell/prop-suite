@@ -3,17 +3,25 @@ $custom_white: #cac5c5;
 $customNavy: #213346;
 
 .sidebar-container {
-  min-height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: $customNavy;
-  width: 20%;
-  color: $custom_white;
+  display: none;
+}
 
-  div {
-    margin-bottom: 7%;
-  }
+// MEDIA QUERIES
+@media (min-width: 64em) {
+  .sidebar-container {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $customNavy;
+    width: 20%;
+    color: $custom_white;
+    display: inline-block;
+  
+    div {
+      margin-bottom: 7%;
+    }
+  } 
 }
 
 .avatar-zone {
@@ -77,3 +85,14 @@ $customNavy: #213346;
   height: 100%;
   object-fit: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
