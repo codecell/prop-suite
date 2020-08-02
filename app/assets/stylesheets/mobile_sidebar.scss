@@ -20,6 +20,21 @@ $customNavy: #213346;
   @media (min-width: 64em) {
     display: none;
   }
+
+  &::after {
+    content: '';
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 20%;
+    background-color: $custom_white;
+    opacity: 0.4;
+
+    @media (min-width: 64em) {
+      display: none;
+    }
+  } 
 }
 
 .mobile-followers-zone {
