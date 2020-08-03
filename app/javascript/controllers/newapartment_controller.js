@@ -8,6 +8,12 @@ export default class extends Controller {
     event.preventDefault()
     this.toggleapartmentformTarget.classList.toggle("d-none") 
   }
+
+  get evet() {}
+
+  set evet(event) {
+    this.openapartmentform(event)
+  }
 }
 
 

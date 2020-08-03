@@ -26,7 +26,7 @@ class Search < ApplicationRecord
 
   def no_nulls
     if !min_price && !max_price && address.empty? && category.empty?      
-      errors.add(:category, "All Search values can't be blank. At least one field is required")
+      errors.add(:base, "All Search values can't be blank. At least one field is required")
     end
   end
 end

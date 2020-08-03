@@ -17,7 +17,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "montserrat";
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -44,10 +44,10 @@ body {
   border-radius: 3px;
   text-align: center;
   color: #fff;
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 15%;
   right: 2%;
-  z-index: 220;
+  z-index: 300;
 }
 
 .alert-success {

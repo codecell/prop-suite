@@ -1,19 +1,19 @@
 <div class="sidebar-container">
   <div class="avatar-zone">
     <div class="avatar-frame">
+      <% if current_user && current_user.avatar.url.present? %>
+        <%= cl_image_tag(current_user.avatar.url,
+        :width=>96, :height=>96, :fetch_format=>:auto, :quality=>"auto",
+        :use_root_path=>true, :class => "current-user-avatar") %>
 
-    <% if current_user.avatar.url.present? %>
-       <%= cl_image_tag(current_user.avatar.url,
-       :width=>96, :height=>96, :fetch_format=>:auto, :quality=>"auto",
-       :use_root_path=>true, :class => "current-user-avatar") %>
-
-    <% else %>
-      <div>
-        <i class="fa fa-user-circle user-icon"></i>
-      </div>
-    <% end %>
+      <% else %>
+        <div>
+          <i class="fa fa-user-circle user-icon"></i>
+        </div>
+      <% end %>
     </div>
-    <p><%= current_user.fullname.upcase %></p>
+    
+    <%= render_current_usernames %>
   </div>
   <div class="followers-zone">
     <div>
@@ -27,18 +27,9 @@
   </div>
   <div class="nav-zone">
     <ul>
-      <li>
-        <i class="fas fa-home sidebar-icon"></i>
-        <%= link_to 'Home', apartments_path %> 
-      </li>
-      <li>
-          <i class="fas fa-user sidebar-icon"></i>
-          <%= link_to 'Profile', edit_user_registration_path %>      
-      </li>
-      <li>
-          <i class="fa fa-dashboard sidebar-icon"></i>
-          <%= link_to 'Dashboard', user_path(current_user) %>      
-      </li>
+      <%= render_home_link %>
+      <%= render_profile_link %>
+      <%= render_dashboard_link %>
     </ul>
   </div>
 </div>

@@ -13,7 +13,10 @@
       </div>
     <% end %>
     </div>
-    <p><%= current_user.fullname.upcase %></p>
+    <p>
+      <%= current_user.fullname.upcase %><br />
+      <small>@<%= current_user.username.downcase %></small>
+    </p>
   </div>
   <div class="mobile-followers-zone">
     <div>
@@ -27,23 +30,10 @@
   </div>
   <div class="nav-zone">
     <ul>
-      <li>
-        <i class="fas fa-home sidebar-icon"></i>
-        <%= link_to 'Home', apartments_path %> 
-      </li>
-      <li>
-          <i class="fas fa-user sidebar-icon"></i>
-          <%= link_to 'Profile', edit_user_registration_path %>      
-      </li>
-      <li>
-          <i class="fa fa-dashboard sidebar-icon"></i>
-          <%= link_to 'Dashboard', user_path(current_user) %>      
-      </li>
-
-      <li>
-        <i class="fa fa-times fa-1.5x" aria-hidden="true"></i>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-      </li>
+      <%= render_home_link %>
+      <%= render_profile_link %>
+      <%= render_dashboard_link %>
+      <%= render_logout_link %>
     </ul>
   </div>
 </div>

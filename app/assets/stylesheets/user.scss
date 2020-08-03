@@ -1,6 +1,5 @@
 $primary: #53A7E8;
 $borderColor: #DBDBDB;
-//  #00aced;
 
 .bg {
   background-color: $primary;
@@ -9,6 +8,10 @@ $borderColor: #DBDBDB;
   text-align: center;
   color: rgba(0, 0, 0, 0.63);
   padding-top: 12%;
+
+  @media (min-width: 64em) {
+    padding-top: 5%;
+  }
 }
 
 .auth-form {
@@ -24,7 +27,6 @@ $borderColor: #DBDBDB;
     color: #DBDBDB
   }
 }
-
 
 .form-label {
   margin: 2% auto;

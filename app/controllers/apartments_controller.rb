@@ -1,5 +1,6 @@
 class ApartmentsController < ApplicationController
   include ApartmentsHelper
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :delete]
  
   def index
     @apartments = !Apartment.all.empty? && Apartment.all.includes(:apartment_attachments)
