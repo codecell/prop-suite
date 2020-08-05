@@ -1,6 +1,11 @@
 
 <div class="bg">
 
+  <div class= "apartment-prev-page-link search-result-page-navs">
+    <%= previous_page %>
+    <%= link_to "Home", root_path, class: "home-link" %>
+  </div>
+
   <section class ='auth-form'>
     <h2> <i class="fas fa-user-circle user-icon"></i> </h2>
     <h2 class ='form-label'>Sign up</h2>
@@ -8,7 +13,7 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.text_field :username, autofocus: true, :placeholder => "@ Username",
+        <%= f.text_field :username, autofocus: true, :placeholder => "Username",
         :class => "text-field" %>
       </div>
 

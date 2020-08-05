@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_112514) do
+ActiveRecord::Schema.define(version: 2020_08_04_010607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 2020_07_31_112514) do
     t.index ["agent_id"], name: "index_apartments_on_agent_id"
   end
 
+  create_table "followings", force: :cascade do |t|
+    t.integer "follower_id", null: false
+    t.integer "followed_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed_id"], name: "index_followings_on_followed_id"
+    t.index ["follower_id"], name: "index_followings_on_follower_id"
+  end
+
   create_table "pictures", force: :cascade do |t|
     t.string "name"
     t.string "imageable_type"
@@ -43,9 +52,7 @@ ActiveRecord::Schema.define(version: 2020_07_31_112514) do
   end
 
   create_table "searches", force: :cascade do |t|
-    t.string "keywords"
     t.string "category"
-    t.string "area"
     t.string "address"
     t.decimal "min_price"
     t.decimal "max_price"

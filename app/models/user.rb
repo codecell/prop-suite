@@ -3,11 +3,19 @@ class User < ApplicationRecord
   mount_uploader :coverphoto, AvatarUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   has_many :apartments, foreign_key: 'agent_id', class_name: 'Apartment', dependent: :destroy
 
+  # Followings associatons
+  # followings initiated by 
+  has_many :followings, class_name: 'Following', foreign_key: 'follower_id'
+  has_many :followers, through: :followings, source: :follower
+  
+  # followings initiated by other users
+  has_many :inverse_followings, class_name: 'Following', foreign_key: 'followed_id'
+  has_many :followeds, through: :followings, source: :followed
+  
   # file size validations
   validate :avatar_size_validation
   validate :coverphoto_size_validation
@@ -22,7 +30,7 @@ class User < ApplicationRecord
  
   private
   def avatar_size_validation
-    errors[:avatar] << "should be less than 500KB" if avatar.size > 0.5.megabytes
+    errors[:avatar] << "should be less than 1000KB(1mb)" if avatar.size > 1.megabytes
   end
 
   def coverphoto_size_validation

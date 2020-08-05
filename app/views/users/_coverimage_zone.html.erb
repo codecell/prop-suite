@@ -4,13 +4,22 @@
       <%= cl_image_tag(@user.coverphoto.url, :height=>250,
        :fetch_format=>:auto, :quality=>"auto", :use_root_path=>true,
        :class => "cover-photo", :alt => "cover photo") %>
+    <% else %>
+      <div class="cover-placeholder">
+        <i class="fa fa-picture-o coverimage-frame-icon"></i>
+      </div>
     <% end %>
   </div>
+
   <div class="show-user-details">
     <div class="user-show-avatar-zone">
       <div class="show-avatar-wrapper">
-          <i class="fas fa-plus-circle plus-icon"></i>
 
+          <div>
+              <%#= render 'followings/following_form' %>
+              <%= render_follow_btn %>
+              <p class="flex-spacer"></p>
+          </div>
           <% if @user.avatar.url.present? %>
             <%= cl_image_tag(@user.avatar.url, :width=>88, :height=>88,
              :fetch_format=>:auto, :quality=>"auto",
@@ -21,20 +30,26 @@
             <div>
               <i class="fas fa-user-circle user-icon"></i>
             </div>          
-          <% end %>        
+          <% end %>  
+      </div>
+
+      <div>
+        <h4><%= @user.fullname %></h4>
+        <small>@<%= @user.username %></small>
       </div>
     </div>
+
     <div class="dashbord-followers-zone">
       <div>
         <h4>3</h4>
         <p>Reviews</p>
       </div>
       <div>
-        <h4>450</h4>
+        <h4><%= @user.followings.count %></h4>
         <p>Following</p>
       </div>
       <div>
-        <h4>460</h4>
+        <h4><%= @user.inverse_followings.count %></h4>
         <p>Followers</p>
       </div>
     </div>

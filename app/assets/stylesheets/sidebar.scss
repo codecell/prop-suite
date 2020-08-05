@@ -1,6 +1,6 @@
 $primary: #53A7E8;
 $custom_white: #cac5c5;
-$customNavy: #213346;
+$customNavy: #213246;
 
 .sidebar-container {
   display: none;
@@ -69,6 +69,10 @@ $customNavy: #213346;
 
     i {
       margin-right: 10px;
+
+    }
+    .sidebar-user-icon {
+      margin-right: 14px;
     }
 
     a {
@@ -79,6 +83,10 @@ $customNavy: #213346;
       background-color: $primary;
     }
   }
+}
+
+.dashboard-icon {
+  font-size: 0.9em;
 }
 
 .current-user-avatar {

@@ -1,9 +1,9 @@
 <div class = "search-page-container">
 
   <div class ="search-form-wrapper">
-    <div class= "apartment-prev-page-link">
-      <i class="fa fa-arrow-left"></i>
-      <%= link_to "Previous page", :back %>
+    <div class= "apartment-prev-page-link search-result-page-navs">
+      <%= previous_page %>
+      <%= link_to "Home", root_path, class: "home-link" %>
     </div>
 
     <h1>Search for an Apartment</h1>

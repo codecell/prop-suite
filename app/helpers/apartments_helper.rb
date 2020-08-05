@@ -37,7 +37,7 @@ module ApartmentsHelper
           end 
           
           item4 = content_tag(:small) do
-            content_tag(:span, "Agent: #{rental.agent_id}", class: "detail-var")
+            content_tag(:span, "Agent: #{apartment_creator(rental)}", class: "detail-var")
           end
 
           item5 = content_tag(:small) do
@@ -84,16 +84,15 @@ module ApartmentsHelper
         end 
         
         item4 = content_tag(:small) do
-          content_tag(:span, "Agent: #{@apartment.agent_id}")
+          content_tag(:span, "Agent: #{apartment_creator(@apartment)}")
         end
 
         item5 = content_tag(:small) do
-          content_tag(:span, "Phone: #{@apartment.agent_id}")
+          content_tag(:span, "Phone: #{apartment_creator_contact(@apartment)}")
         end
 
         item6 = content_tag(:small) do
-          content_tag(:i, class: "fa fa-arrow-left")
-          link_to("Previous page", :back)
+          previous_page
         end
 
         item1 + item2 + item3 + item4 + item5 + item6

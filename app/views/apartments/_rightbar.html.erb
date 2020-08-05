@@ -4,12 +4,30 @@
         <i class="fas fa-spinner"></i>
       </h4>
       <ul>
-        <li class="who-to-follow-item">
-          <i class="fas fa-user-circle user-icon"></i>
-          <div>
-            <p><strong>user.name</strong></p>
-            <small>N followers</small>
-          </div>
-        </li>
+        <% User.all.each do |user| %>
+          <%  if (user != current_user) %>
+            <%= link_to user_path(user), class: "who-to-follow-link" do %>
+              <li class="who-to-follow-item">
+                <% if (user.avatar.url.present?) %>
+                  <%= cl_image_tag(user.avatar.url,
+                  :width=>60, :height=>60, :fetch_format=>:auto, :quality=>"auto",
+                  :use_root_path=>true, :class => "users-list-avatar") %>
+
+                <% else %>
+                  <div>
+                    <i class="fa fa-user-circle user-icon"></i>
+                  </div>
+                <% end %>
+
+                <div class="who-to-follow-details">
+                  <p>
+                    <strong><%= user.fullname %></strong>
+                  </p>
+                  <small><%= user.inverse_followings.count %> followers</small>
+                </div>
+              </li>
+            <% end %>
+          <% end %>
+        <% end %>
       <ul>
 </div>

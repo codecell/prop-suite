@@ -17,11 +17,11 @@
   </div>
   <div class="followers-zone">
     <div>
-      <h2>450</h2>
+      <h2> <%= (current_user && current_user.followings.count) %> </h2>
       <p>Following</p>
     </div>
     <div>
-    <h2>460</h2>
+    <h2><%= (current_user && current_user.inverse_followings.count) %></h2>
     <p>Followers</p>
     </div>
   </div>

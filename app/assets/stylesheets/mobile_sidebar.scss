@@ -21,6 +21,7 @@ $customNavy: #213346;
     display: none;
   }
 
+  // backdrop
   &::after {
     content: '';
     height: 100vh;
@@ -28,7 +29,7 @@ $customNavy: #213346;
     right: 0;
     top: 80px;
     width: 20%;
-    background-color: $custom_white;
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 0.4;
 
     @media (min-width: 64em) {

@@ -29,16 +29,26 @@ $offwhite: #efefef;
   justify-content: space-around;
 }
 
+.who-to-follow-link {
+  color: rgba(0, 0, 0, 0.62);
+}
 
 .who-to-follow-item {
   display: flex;
   align-items: center;
-  padding: 4%;
+  padding-left: 10%;
+  padding-top: 4%;
+  width: 100%;
 
   .user-icon {
-    font-size: 3em;
-    margin-right: 4%;
+    font-size: 3.5em;
+    // margin-right: 3%;
   }
+}
+
+.who-to-follow-details, .user-followers-details {
+  margin-left: 5%;
+  flex: 1.3;
 }
 
 .right-bar {
@@ -47,4 +57,26 @@ $offwhite: #efefef;
 
 .user_rightbar {  
   top: 330px;
+}
+
+.users-list-avatar, .user-followers-avatar {
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-followers {
+  a {
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.user-followers-avatar { 
+  margin-left: -3%;
+  margin-right: -6%;
+}
+
+.user-followers-fullname {
+  
 }

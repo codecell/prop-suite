@@ -1,0 +1,15 @@
+$primary: #52A7E7;
+
+.btn-follow {
+  padding: 4px 9px;
+  border: 1.2px solid $primary;
+  color: $primary;
+  background-color: #fff;
+  font-size: 0.9em;
+  border-radius: 20px;
+  cursor: pointer;
+
+  @media (min-width: 64em) {
+    font-size: 1.2em;
+  }
+}
