@@ -14,9 +14,7 @@
   <div class="show-user-details">
     <div class="user-show-avatar-zone">
       <div class="show-avatar-wrapper">
-
           <div>
-              <%#= render 'followings/following_form' %>
               <%= render_follow_btn %>
               <p class="flex-spacer"></p>
           </div>
@@ -30,7 +28,13 @@
             <div>
               <i class="fas fa-user-circle user-icon"></i>
             </div>          
-          <% end %>  
+          <% end %>
+
+          <div>
+            <%= link_to user_reviews_path(@user, @reviews) do %>
+              <button class="btn-review-cover-img">Add Review</button>
+            <% end %>
+          </div> 
       </div>
 
       <div>
@@ -41,8 +45,10 @@
 
     <div class="dashbord-followers-zone">
       <div>
-        <h4>3</h4>
-        <p>Reviews</p>
+        <%= link_to user_reviews_path(@user, @reviews) do %>
+          <h4 class="reviews-count"><%= @user.inverse_reviews.count %> </h4>
+          <p>Reviews</p>
+        <% end %>
       </div>
       <div>
         <h4><%= @user.followings.count %></h4>

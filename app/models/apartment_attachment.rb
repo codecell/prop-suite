@@ -3,7 +3,7 @@ class ApartmentAttachment < ApplicationRecord
 
   belongs_to :apartment
 
-  # Apartment Photo Validation
+  # Apartment Photo Validations
   validates :apartmentphoto, presence: true
   validate :apartmentphoto_size_validation
   validates_integrity_of  :apartmentphoto

@@ -1,6 +1,7 @@
 $borderColor: #DBDBDB;
 $offwhite: #efefef;
 $darkText: #555;
+$primary: #53A7E8;
 
 .cover-image-container {
   width: 100%;
@@ -132,4 +133,24 @@ $darkText: #555;
       font-size: 15px;
     }
   }
+
+  a {
+    color: $darkText;
+  }
+}
+
+.btn-review-cover-img {
+  padding: 2px 4px;
+  border: 1.2px solid $primary;
+  color: $primary;
+  background-color: #fff;
+  font-size: 0.9em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 300ms;
+  margin: auto 2%;
+}
+
+.reviews-count {
+  text-align: center;
 }

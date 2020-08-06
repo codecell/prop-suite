@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   include UsersHelper
-
+ 
   def index
-    @users = User.all
+    @users = User.all.includes(:reviews)
   end
 
   def show

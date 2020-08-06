@@ -9,13 +9,23 @@ class User < ApplicationRecord
 
   # Followings associatons
   # followings initiated by 
-  has_many :followings, class_name: 'Following', foreign_key: 'follower_id'
+  has_many :followings, dependent: :destroy, class_name: 'Following', foreign_key: 'follower_id'
   has_many :followers, through: :followings, source: :follower
   
   # followings initiated by other users
   has_many :inverse_followings, class_name: 'Following', foreign_key: 'followed_id'
   has_many :followeds, through: :followings, source: :followed
+
+  # Reviews
+  has_many :reviews, class_name: 'Review', foreign_key: 'reviewer_id'
+  has_many :reviewers, through: :reviews, source: :reviewer
   
+  
+  # Reviews created by other users
+  has_many :inverse_reviews, class_name: 'Review', foreign_key: 'reviewed_id'
+  has_many :revieweds, through: :reviews, source: :reviewed
+  accepts_nested_attributes_for :reviews, reject_if: :all_blank, :allow_destroy => true
+
   # file size validations
   validate :avatar_size_validation
   validate :coverphoto_size_validation

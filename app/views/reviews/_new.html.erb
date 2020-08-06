@@ -1,0 +1,15 @@
+<div>
+  <%= form_for [current_user, Review.new] do |f| %>
+    <%= hidden_field_tag "reviewed_id", @user.id %>
+    <%= hidden_field_tag "reviewer_id", current_user.id  if current_user %>
+    <div class="rating-div">
+      <%= f.label :rate_your_experience %>:
+      <%= f.select :rating, Review.ratings.map { |key, value| [key.humanize, key] } %>
+    </div>
+    <div>
+      <%= f.text_area :content, placeholder: 'Add new Feedback', class: "review-text-area" %>
+    </div>
+
+    <%= f.submit 'Submit', class: 'btn-new-review' %>
+  <% end %>
+</div>
