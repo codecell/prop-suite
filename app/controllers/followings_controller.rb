@@ -1,4 +1,5 @@
 class FollowingsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :delete]
   include FollowingsHelper
 
   def new

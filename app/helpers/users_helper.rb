@@ -35,4 +35,26 @@ module UsersHelper
         end
       end 
   end
+
+  def render_sidebar_followers
+    if current_user
+      content_tag :div, class: "followers-zone" do 
+        followings_div = content_tag :div do
+          followings_count = content_tag(:h2, "#{current_user.followings.count}")
+          label_followings = content_tag(:p, "Following")
+
+          followings_count + label_followings
+        end
+
+        followers_div = content_tag :div do
+          followers_count = content_tag(:h2, "#{current_user.inverse_followings.count}")
+          label_followers = content_tag(:p, "Followers")
+
+          followers_count + label_followers
+        end
+
+        concat(followings_div + followers_div)
+      end
+    end
+  end
 end

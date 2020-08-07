@@ -12,7 +12,7 @@ module FollowingsHelper
       followers_array << uzer[0].id      
     end
 
-    if followers_array.include?(current_user.id)
+    if (current_user && followers_array.include?(current_user.id))
       "following"
     else
       content_tag :div do

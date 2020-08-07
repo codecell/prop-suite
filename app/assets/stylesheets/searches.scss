@@ -11,6 +11,10 @@ $offwhite: #efefef;
   height: 100vh;
   padding-top: 10%;
   color: $darkText;
+
+  @media (min-width: 64em) {
+    padding-top: 6%;
+  }
 }
 
 .search-asterist {
@@ -25,7 +29,7 @@ $offwhite: #efefef;
   text-align: center;
 
   h1 {
-    padding-top: 3%;
+    padding-top: 1.5%;
   }
 
   input {
@@ -52,6 +56,10 @@ $offwhite: #efefef;
 
     input {
       min-width: 8em;
+
+      @media (min-width: 64em) {
+        min-width: 6.2em;
+      }
     }
 }
 

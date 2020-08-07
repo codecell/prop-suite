@@ -4,7 +4,7 @@
         <i class="fas fa-spinner"></i>
       </h4>
       <ul>
-        <% User.all.each do |user| %>
+        <% User.all.ordered_by_most_recent.each do |user| %>
           <%  if (user != current_user) %>
             <%= link_to user_path(user), class: "who-to-follow-link" do %>
               <li class="who-to-follow-item">
