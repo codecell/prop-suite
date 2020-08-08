@@ -62,12 +62,15 @@ $darkText: #555;
   }
 }
 .rev-prev-page {
+  position: absolute;
   padding-left: 2%;
+  top: 15%;
+  left: 0%;
 }
 
 .btn-toggle-new-rev {
   position: absolute;
-  top: 19%;
+  top: 15%;
   left: 78%;
   
   @media (min-width: 64em) {
@@ -150,7 +153,7 @@ $darkText: #555;
   }
 
   td {
-    padding: 1%;
+    margin-bottom: 5px;
     border-left: 1.2px solid $borderColor;
 
     &:nth-child(1) {

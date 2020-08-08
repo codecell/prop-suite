@@ -36,6 +36,23 @@ module UsersHelper
       end 
   end
 
+  def render_coverimage_zone_avatar(user)
+    if (user && user.avatar.url.present?)
+      content_tag :div do
+        cl_image_tag(user.avatar.url, :width=>88, :height=>88,
+          :fetch_format=>:auto, :quality=>"auto",
+          :use_root_path=>true,
+          :class => "user-show-avatar")
+      end
+    else
+      content_tag :div do
+        content_tag :i, class: "fas fa-user-circle user-icon" do;end
+      end
+    end
+  end
+
+
+
   def render_sidebar_followers
     if current_user
       content_tag :div, class: "followers-zone" do 

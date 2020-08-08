@@ -18,17 +18,8 @@
               <%= render_follow_btn %>
               <p class="flex-spacer"></p>
           </div>
-          <% if @user.avatar.url.present? %>
-            <%= cl_image_tag(@user.avatar.url, :width=>88, :height=>88,
-             :fetch_format=>:auto, :quality=>"auto",
-             :use_root_path=>true,
-             :class => "user-show-avatar") %>
-
-          <% else %>
-            <div>
-              <i class="fas fa-user-circle user-icon"></i>
-            </div>          
-          <% end %>
+          
+          <%= render_coverimage_zone_avatar(@user) %>
 
           <div>
             <%= link_to user_reviews_path(@user, @reviews) do %>
