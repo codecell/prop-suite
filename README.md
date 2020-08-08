@@ -17,7 +17,7 @@ The app has two levels of authorization;
 
 ## Technologies
 - The application was developed with [Ruby on Rails](https://rubyonrails.org/).
-- [Postgres](https://www.postgresql.org/) for database management in development.
+- [Postgres](https://www.postgresql.org/) for database management.
 - All apartment, user avatar and coverphoto images are hosted on [Cloudinary](https://cloudinary.com/).
 - [Sass](https://sass-lang.com/) for styling.
 - [Stimulus Js](https://stimulusjs.org/) for adding functional responsiveness(click events management).
@@ -28,7 +28,7 @@ The app has two levels of authorization;
 Follow the steps below to setup a local development environment. First ensure you have [postgres](https://www.postgresql.org/) installed, and a version of [Ruby on Rails](https://rubyonrails.org/) equal or greater than v5.2.3 .
 
 1. Clone the repository from a terminal `git clone https://github.com/codecell/prop-suite`.
-2. Navigate to the project directory `prop-suite`
+2. Navigate to the project directory `cd prop-suite`
 3. Install project dependencies `bundle install`
 4. Start the rails server `rails server`
 5. Visit localhost:3000 and Voila!!!
