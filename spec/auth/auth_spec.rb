@@ -12,7 +12,6 @@ RSpec.describe 'Main flow', type: :system do
       fill_in('user[password]', with: 'password')
       fill_in('user[password_confirmation]', with: 'password')
       click_button('Sign up')
-
       click_link('Logout')
 
       # Sign up User2
