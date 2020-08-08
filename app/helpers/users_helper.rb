@@ -57,4 +57,48 @@ module UsersHelper
       end
     end
   end
+
+  # USERS INDEX PAGE
+  def avatar_present?(user)
+    if (user.avatar.url.present?)
+      user_icon = content_tag :div do 
+        cl_image_tag(user.avatar.url, :width=>60, :height=>60, 
+        :fetch_format=>:auto, :quality=>"auto", :use_root_path=>true,
+        :class => "users-list-avatar")
+      end
+    else
+      user_icon = content_tag(:i, class: "fa fa-user-circle user-icon") do;end
+    end
+  end
+
+  def render_user_details(user)
+    content_tag :div, class: "who-to-follow-details" do
+      user_fullname = content_tag :p do
+        content_tag(:strong, "#{user.fullname}")
+      end
+      user_followerz = content_tag(:small, "#{user.inverse_followings.count} followers")
+
+      user_fullname + user_followerz
+    end
+  end
+
+  def who_to_follow
+    content_tag :ul do 
+      User.all.ordered_by_most_recent[0..9].each do |user|
+        if (user != current_user)
+          user_row_link =  link_to user_path(user), class: "who-to-follow-link" do
+            content_tag :li, class: "who-to-follow-item users-index-wtf-item" do
+
+              user_icon = avatar_present?(user)
+              user_details = render_user_details(user)
+
+              user_icon + user_details
+            end
+          end
+
+          concat(user_row_link)
+        end
+      end
+    end
+  end
 end

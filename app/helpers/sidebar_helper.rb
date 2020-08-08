@@ -37,6 +37,16 @@ module SidebarHelper
     end
   end
 
+  def render_who_to_follow_link
+    link_to(users_path) do 
+      content_tag :li do 
+        users_icon = content_tag :i, class: "fa fa-users" do;end
+
+        users_icon + 'Who to follow ?'
+      end
+    end
+  end
+
   def render_profile_link
     link_to(edit_user_registration_path) do 
       content_tag :li do 

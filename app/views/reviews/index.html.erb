@@ -1,7 +1,7 @@
-<div class="reviews-container">
-  <div class="reviews-main">
+<div class="primary-container">
+  <div class="primary-main">
     <h1> 
-      <%= @user.fullname.capitalize! %>'s Clients Reviews
+      <%= render_reviewed_user_fullnames %>'s Clients Reviews
     </h1>
 
     <div class="rev-prev-page">
@@ -23,6 +23,7 @@
       <table class="review-table">
         <tr>
           <th>S/N</th>
+          <th>Reviewer</th>
           <th>Feedback</th>
           <th>Submitted</th>
           <th>Rating</th>

@@ -31,12 +31,16 @@ $borderColor: #DBDBDB;
 }
 
 .edit-user-canvas {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   background-color: #efefef;
   padding: 3%;
   border-radius: 3px;
+
+  @media (min-width: 64em) {
+    width: 60%;
+  }
 }
 
 .edit-profile-field {

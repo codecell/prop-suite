@@ -1,5 +1,6 @@
 $primary: #53A7E8;
 $borderColor: #DBDBDB;
+$offwhite: #efefef;
 
 .bg {
   background-color: $primary;
@@ -68,4 +69,19 @@ $borderColor: #DBDBDB;
 
 .details-wrapper {
   display: flex;
+}
+
+// <<<< USERS INDEX PAGE >>>> strictly for mobile screen range
+.usersindex-who-to-follow-wrapper {
+  width: 30%;
+  margin: 1.5% auto;
+  border-radius: 6px;
+}
+
+.users-index-wtf-item {
+  background-color: $offwhite;
+  margin-bottom: 5px;
+  padding: 2%;
+  padding-left: 4%;
+  border-radius: 6px;
 }

@@ -42,9 +42,12 @@ $offwhite: #efefef;
 }
 
 .btn-data-action-new-apartment {
-  padding: 5px;
-  height: 40px;
-  margin-top: 5px;
+  height: 100%;
+  margin-top: -2px;
   border: none;
   font-size: 1em;
+}
+
+.envelope-icon {
+  margin-right: 7px;
 }
