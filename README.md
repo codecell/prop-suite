@@ -1,6 +1,21 @@
 # Prop-suite
 This is a platform where clients can check for available property(apartment) postings, contact the sellers, then review the sellers after a transaction. The app's original theme both in design and functionaly is built to mimic [Twitter](https://www.twitter.com), so users also have to option to follow other users. The app is mobile-responsive.
 
+## Outline
+- Description(above)
+- Features
+- Technologies used
+- Installation
+- Endpoints
+    - auth
+    - users
+    - apartments
+    - followings
+    - reviews
+    - search
+- Author
+- Licence
+
 ## Features
 
 The app has two levels of authorization;
@@ -74,7 +89,7 @@ POST /users/user_id/reviews    |   Allows user to review another user.
 EndPoint                       |   Functionality
 -------------------------------|------------------------
 GET /searches/new              |   Allows a client enter search fields.
-POST /searches                 |   Allows a client search to for apartments.
+POST /searches                 |   Allows a client to search for apartments.
 
 ## Author
 
@@ -87,3 +102,6 @@ POST /searches                 |   Allows a client search to for apartments.
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Licence
+- MIT
