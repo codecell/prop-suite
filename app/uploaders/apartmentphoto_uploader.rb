@@ -16,6 +16,6 @@ class ApartmentphotoUploader < CarrierWave::Uploader::Base
   end
 
   def content_type_whitelist
-    [/image\//]
+    [%r{image/}]
   end
 end

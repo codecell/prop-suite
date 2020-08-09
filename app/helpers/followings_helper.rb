@@ -4,20 +4,21 @@ module FollowingsHelper
   end
 
   def render_follow_btn
-    followers_relation = @user.inverse_followings.map { |following| 
-      User.all.where(:id => following.follower_id).includes(:followings) }
+    followers_relation = @user.inverse_followings.map do |following|
+      User.all.where(id: following.follower_id).includes(:followings)
+    end
 
     followers_array = []
     followers_relation.each do |uzer|
-      followers_array << uzer[0].id      
+      followers_array << uzer[0].id
     end
 
-    if (current_user && followers_array.include?(current_user.id))
-        content_tag(:p, "following", class: "already-following")
+    if current_user && followers_array.include?(current_user.id)
+      content_tag(:p, 'following', class: 'already-following')
     else
       content_tag :div do
-        render 'followings/following_form' 
+        render 'followings/following_form'
       end
-    end      
+    end
   end
 end

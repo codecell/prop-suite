@@ -6,11 +6,12 @@ class ApartmentAttachment < ApplicationRecord
   # Apartment Photo Validations
   validates :apartmentphoto, presence: true
   validate :apartmentphoto_size_validation
-  validates_integrity_of  :apartmentphoto
+  validates_integrity_of :apartmentphoto
   validates_processing_of :apartmentphoto
- 
+
   private
+
   def apartmentphoto_size_validation
-    errors[:apartmentphoto] << "should be less than 1000KB(1mb)" if apartmentphoto.size > 1.megabytes
+    errors[:apartmentphoto] << 'should be less than 1000KB(1mb)' if apartmentphoto.size > 1.megabytes
   end
 end

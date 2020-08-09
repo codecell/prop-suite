@@ -19,7 +19,7 @@ RSpec.describe Apartment, type: :model do
     )
   end
 
-  describe 'model' do 
+  describe 'model' do
     it 'creates a new apartment' do
       expect(apartmentz).to eq(user2.apartments.first)
     end

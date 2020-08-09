@@ -4,7 +4,7 @@ class SearchesController < ApplicationController
   def new
     @search = Search.new
   end
-  
+
   def create
     @search = Search.create(search_params)
 
@@ -13,9 +13,9 @@ class SearchesController < ApplicationController
     else
       flash.alert = @search.errors.full_messages[0]
       render 'new'
-    end    
+    end
   end
-  
+
   def show
     @search = Search.find(params[:id])
   end
