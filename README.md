@@ -1,8 +1,12 @@
 # Prop-suite
 This is a platform where clients can check for available property(apartment) postings, contact the sellers, then review the sellers after a transaction. The app's original theme both in design and functionaly is built to mimic [Twitter](https://www.twitter.com), so users also have to option to follow other users. The app is mobile-responsive.
 
+## Live version
+The website is hosted on heroku here => [propsuite](https://tranquil-meadow-73761.herokuapp.com/).
+
 ## Outline
-- Description(above)
+- Description and
+- Live version (above).
 - Features
 - Technologies used
 - Installation
