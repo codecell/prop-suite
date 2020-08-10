@@ -1,23 +1,25 @@
 <div class="mobile-sidebar-container">
   <div class="avatar-zone">
     <div class="avatar-frame">
+      <%= link_to edit_user_registration_path do %>
+        <% if current_user.avatar.url.present? %>
+          <%= cl_image_tag(current_user.avatar.url,
+          :width=>96, :height=>96, :fetch_format=>:auto, :quality=>"auto",
+          :use_root_path=>true, :class => "current-user-avatar") %>
 
-    <% if current_user.avatar.url.present? %>
-       <%= cl_image_tag(current_user.avatar.url,
-       :width=>96, :height=>96, :fetch_format=>:auto, :quality=>"auto",
-       :use_root_path=>true, :class => "current-user-avatar") %>
-
-    <% else %>
-      <div>
-        <i class="fa fa-user-circle user-icon"></i>
-      </div>
-    <% end %>
+        <% else %>
+          <div>
+            <i class="fa fa-user-circle user-icon"></i>
+          </div>
+        <% end %>
+      <% end %>
     </div>
     <p>
-      <%= current_user.fullname.upcase %><br />
-      <small>@<%= current_user.username.downcase %></small>
+      <small class="mobile-sidebar-fullname" ><%= current_user.fullname.upcase %></small><br />
+      <small class= "mobile-sidebar-username">@<%= current_user.username.downcase %></small>
     </p>
   </div>
+
   <div class="mobile-followers-zone">
     <div>
       <h2><%= (current_user && current_user.followings.count) %></h2>

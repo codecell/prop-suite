@@ -1,13 +1,15 @@
 <div class="cover-image-container">
   <div class="image-frame">
-    <% if @user.coverphoto.url.present? %>
-      <%= cl_image_tag(@user.coverphoto.url, :height=>250,
-       :fetch_format=>:auto, :quality=>"auto", :use_root_path=>true,
-       :class => "cover-photo", :alt => "cover photo") %>
-    <% else %>
-      <div class="cover-placeholder">
-        <i class="fa fa-picture-o coverimage-frame-icon"></i>
-      </div>
+    <%= link_to edit_user_registration_path do %>
+      <% if @user.coverphoto.url.present? %>
+        <%= cl_image_tag(@user.coverphoto.url, :height=>250,
+        :fetch_format=>:auto, :quality=>"auto", :use_root_path=>true,
+        :class => "cover-photo", :alt => "cover photo") %>
+      <% else %>
+        <div class="cover-placeholder">
+          <i class="fa fa-picture-o coverimage-frame-icon"></i>
+        </div>
+      <% end %>
     <% end %>
   </div>
 

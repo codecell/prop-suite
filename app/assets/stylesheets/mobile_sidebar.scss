@@ -38,6 +38,14 @@ $customNavy: #213346;
   } 
 }
 
+.mobile-sidebar-fullname {
+  font-size: 2em;
+}
+
+.mobile-sidebar-username {
+  font-size: 1.4em;
+}
+
 .mobile-followers-zone {
   width: 40%;
   display: flex;
@@ -45,5 +53,29 @@ $customNavy: #213346;
 
   div {
     text-align: center;
+
+    &:first-child {
+      padding-left: 17%;
+      margin-right: 8%;
+    }
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  @media (min-width: 64em) {
+
+    h2 {
+      font-size: auto;
+    }
+
+    p {
+      font-size: auto;
+    }
   }
 }

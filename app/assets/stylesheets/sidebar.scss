@@ -24,20 +24,36 @@ $customNavy: #213246;
   } 
 }
 
+.sidebar-icon-link {
+  margin-right: 6%;
+}
+
 .avatar-zone {
   width: 100%;
   display: flex;
   align-items: center;
-  padding-left: 1.5em;
-
+  padding-left: 3.5em;
+  
   .avatar-frame {
     background-color: #efefef;
     border-radius: 3px;
-    height: 6em;
-    width: 6em;
+    height: 9em;
+    width: 9em;
     margin-right: 4%;
     margin-top: 8%;
+    text-align: center;
+    padding-top: 3%;
   }
+
+  @media(min-width: 64em) {
+    padding-left: 1.5em;
+
+    .avatar-frame {
+      height: 6em;
+      width: 6em;
+      padding-top: 0;
+    }
+  } 
 }
 
 .followers-zone {
@@ -63,16 +79,28 @@ $customNavy: #213246;
     padding-left: 1.5em;
     padding-top: 0.8em;
     padding-bottom: 0.8em;
-    font-size: 1.2em;
+    font-size: 2.5em;
     cursor: pointer;
     color: $custom_white;
 
-    i {
-      margin-right: 10px;
-
+    @media (min-width: 64em) {
+      font-size: 1.2em;
     }
+
+    i {
+      margin-right: 25px;
+
+      @media (min-width: 64em) {
+        margin-right: 10px;
+      }
+    }
+
     .sidebar-user-icon {
-      margin-right: 14px;
+      margin-right: 28px;
+
+      @media (min-width: 64em) {
+        margin-right: 14px;
+      }
     }
 
     a {
@@ -94,15 +122,4 @@ $customNavy: #213246;
   height: 100%;
   object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
 

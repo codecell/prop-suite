@@ -1,17 +1,19 @@
 <div class="sidebar-container">
   <div class="avatar-zone">
-    <div class="avatar-frame">
-      <% if current_user && current_user.avatar.url.present? %>
-        <%= cl_image_tag(current_user.avatar.url,
-        :width=>96, :height=>96, :fetch_format=>:auto, :quality=>"auto",
-        :use_root_path=>true, :class => "current-user-avatar") %>
+    <%= link_to edit_user_registration_path, class: "sidebar-icon-link" do %>
+      <div class="avatar-frame">
+        <% if current_user && current_user.avatar.url.present? %>
+          <%= cl_image_tag(current_user.avatar.url,
+          :width=>96, :height=>96, :fetch_format=>:auto, :quality=>"auto",
+          :use_root_path=>true, :class => "current-user-avatar") %>
 
-      <% else %>
-        <div>
-          <i class="fa fa-user-circle user-icon"></i>
-        </div>
-      <% end %>
-    </div>
+        <% else %>
+          <div>
+            <i class="fa fa-user-circle user-icon"></i>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
     
     <%= render_current_usernames %>
   </div>

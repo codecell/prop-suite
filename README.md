@@ -45,6 +45,7 @@ The app has two levels of authorization;
 - [Stimulus Js](https://stimulusjs.org/) for adding functional responsiveness(click events management).
 - [Webpacker](https://github.com/rails/webpacker) for managing javascript assets.
 - [Github Actions](https://github.com/features/actions) and [Travis CI](https://travis-ci.org/) for CI.
+- [Rucocop](https://rubocop.org/) to ensure ruby developer best practices.
 - [Rspec](https://rspec.info/) and [Capybara](https://github.com/teamcapybara/capybara) for UI, unit and integration tests.
 
 ## Installation
