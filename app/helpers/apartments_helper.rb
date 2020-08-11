@@ -12,7 +12,7 @@ module ApartmentsHelper
   #           span .detail-var
   def show_apartments
     content_tag(:div, class: 'show-apartments') do
-      @apartments&.each do |rental|
+      @apartments && @apartments.each do |rental|
         photos_container = content_tag :div, class: 'apartmentphotos-frame' do
           rental.apartment_attachments.count.positive? &&
             rental.apartment_attachments[0..1].each do |pic|
