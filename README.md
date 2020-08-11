@@ -6,9 +6,9 @@ The website is hosted on heroku here => [propsuite](https://tranquil-meadow-7376
 
 ## UI Preview
     
- ![image](https://user-images.githubusercontent.com/46686100/89936496-a0474e00-dc0b-11ea-8ccf-a2c3f71951b6.png)|![image](https://user-images.githubusercontent.com/46686100/89936700-f1574200-dc0b-11ea-8e1b-102efcc2e5f3.png)
- ![image](https://user-images.githubusercontent.com/46686100/89937479-113b3580-dc0d-11ea-9256-096612f25313.png)|![image](https://user-images.githubusercontent.com/46686100/89937811-7bec7100-dc0d-11ea-813a-21cfafc157d7.png)
-
+ |![image](https://user-images.githubusercontent.com/46686100/89936496-a0474e00-dc0b-11ea-8ccf-a2c3f71951b6.png)|![image](https://user-images.githubusercontent.com/46686100/89936700-f1574200-dc0b-11ea-8e1b-102efcc2e5f3.png)|
+ -------------------------------------------------------------------------------------------------------------------------
+ |![image](https://user-images.githubusercontent.com/46686100/89937479-113b3580-dc0d-11ea-9256-096612f25313.png)|![image](https://user-images.githubusercontent.com/46686100/89937811-7bec7100-dc0d-11ea-813a-21cfafc157d7.png)|
 
 
 ## Outline
