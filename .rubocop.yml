@@ -42,9 +42,9 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
-
-Layout/HashAlignment:
-  EnforcedColonStyle: key
+Style/SafeNavigation:
+  Enabled: false
+  
 Layout/ExtraSpacing:
   AllowForAlignment: false
 Layout/EmptyLinesAroundAttributeAccessor:
