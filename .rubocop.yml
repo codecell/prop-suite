@@ -44,23 +44,15 @@ Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 Style/SafeNavigation:
   Enabled: false
-  
+
 Layout/ExtraSpacing:
   AllowForAlignment: false
-Layout/EmptyLinesAroundAttributeAccessor:
-  Enabled: true
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
-  Enabled: false
-Lint/DeprecatedOpenSSLConstant:
-  Enabled: false
-Lint/MixedRegexpCaptureTypes:
   Enabled: false
 Layout/HashAlignment:
   Enabled: false
@@ -70,16 +62,6 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
-  Enabled: false
-Style/ExponentialNotation:
-  Enabled: false
-Style/RedundantFetchBlock:
-  Enabled: true
-Style/RedundantRegexpCharacterClass:
-  Enabled: true
-Style/RedundantRegexpEscape:
-  Enabled: true
-Style/SlicingWithRange:
   Enabled: false
 Style/GuardClause:
   Enabled: false
