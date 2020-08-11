@@ -57,6 +57,9 @@ Follow the steps below to setup a local development environment. First ensure yo
 4. Start the rails server `rails server`
 5. Visit localhost:3000 and Voila!!!
 
+## Entity Relationship Diagram
+   ![image](https://user-images.githubusercontent.com/46686100/89930724-172c1900-dc03-11ea-8849-36071e5d3b1c.png)
+
 ## Endpoints
 ### Auth
 EndPoint                       |   Functionality
