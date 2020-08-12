@@ -37,7 +37,8 @@ body {
   overflow-x: hidden;
 }
 
-.alert-success, .alert-danger {
+.alert-success,
+.alert-danger {
   width: 25%;
   margin: 0 auto;
   padding: 5px;
@@ -51,7 +52,7 @@ body {
 }
 
 .alert-success {
-  background-color: #228B22;
+  background-color: #228b22;
 }
 
 .alert-danger {
