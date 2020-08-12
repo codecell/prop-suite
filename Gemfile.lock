@@ -303,6 +303,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.3)
   rails-controller-testing
+  rake
   rspec-rails
   rubocop (~> 0.81.0)
   sass-rails (~> 5.0)
