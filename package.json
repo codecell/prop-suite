@@ -7,8 +7,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stylelint": "npx stylelint '**/*.{css,scss}'",
-    "stylelint-fix": "npx stylelint npx stylelint '**/*.{css,scss}' --fix"
+    "stylelint": "npx stylelint /home/alfrednoble/Desktop/microverse/prop-suite/app/assets/stylesheets/*.scss",
+    "stylelint-fix": "npx stylelint npx stylelint /home/alfrednoble/Desktop/microverse/prop-suite/app/assets/stylesheets/*.scss --fix"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.11.0",
