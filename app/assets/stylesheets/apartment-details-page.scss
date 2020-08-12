@@ -33,7 +33,11 @@ $customNavy: #213346;
 
   .apartment-image {
     flex: 0.5;
-    height: 50vh;
+    height: auto;
+
+    @media (min-width: 64em) {
+      height: 50vh;
+    }
   }
 }
 
