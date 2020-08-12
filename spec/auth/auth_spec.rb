@@ -3,7 +3,7 @@ require 'rails_helper'
 # rspec spec/views/user_spec.rb
 RSpec.describe 'Main flow', type: :system do
   describe 'New user' do
-    it 'Logs in, creates post and logout' do
+    it 'Signs up, Logs in, and logout' do
       visit('/users/sign_up')
       # Sign up User1
       fill_in('user[username]', with: 'Test')
