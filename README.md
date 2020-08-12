@@ -16,7 +16,8 @@ The website is hosted on heroku here => [propsuite](https://tranquil-meadow-7376
 
 ## Outline
 - Description and
-- Live version (above).
+- Live version
+- UI Preview (above).
 - Features
 - Technologies used
 - Installation
@@ -54,7 +55,7 @@ The app has two levels of authorization;
 - [Sass](https://sass-lang.com/) and pure CSS for styling.
 - [Stimulus Js](https://stimulusjs.org/) for adding functional responsiveness(click events management).
 - [Webpacker](https://github.com/rails/webpacker) for managing javascript assets.
-- [Github Actions](https://github.com/features/actions) and [Travis CI](https://travis-ci.org/) for CI.
+- [Github Actions](https://github.com/features/actions) for CI.
 - [Rucocop](https://rubocop.org/) to ensure ruby developer best practices.
 - [Rspec](https://rspec.info/) and [Capybara](https://github.com/teamcapybara/capybara) for UI, unit and integration tests.
 
