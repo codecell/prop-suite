@@ -21,6 +21,7 @@ The website is hosted on heroku here => [propsuite](https://tranquil-meadow-7376
 - Features
 - Technologies used
 - Installation
+- Entity Relationship Diagram(ERD)
 - Endpoints
     - auth
     - users
@@ -69,7 +70,9 @@ Follow the steps below to setup a local development environment. First ensure yo
 5. Visit localhost:3000 and Voila!!!
 
 ## Entity Relationship Diagram
-   ![image](https://user-images.githubusercontent.com/46686100/89930724-172c1900-dc03-11ea-8849-36071e5d3b1c.png)
+   |           |
+   |-----------|
+   |![image](https://user-images.githubusercontent.com/46686100/89991307-8d6c6200-dc7b-11ea-9b84-d0e68dae1201.png)|
 
 ## Endpoints
 ### Auth
