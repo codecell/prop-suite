@@ -5,3 +5,12 @@ rvm:
 
 before_install:
   - gem install bundler
+
+services:
+- postgresql
+env:
+  - database=postgres://postgres@127.0.0.1:5432/propsuite_test
+
+before_script:
+  - psql -c 'drop database if exists propsuite_test;' -U postgres
+  - psql -c 'create database propsuite_test;' -U postgres
