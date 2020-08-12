@@ -1,3 +1,5 @@
+![Linters](https://github.com/codecell/prop-suite/workflows/Linters/badge.svg)
+
 # Prop-suite
 This is a platform where clients can check for available property(apartment) postings, contact the sellers, then review the sellers after a transaction. The app's original theme both in design and functionaly is built to mimic [Twitter](https://www.twitter.com), so users also have to option to follow other users. The app is mobile-responsive.
 
