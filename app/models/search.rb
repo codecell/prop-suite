@@ -8,22 +8,24 @@ class Search < ApplicationRecord
   private
 
   def find_apartments
-    search_data = Apartment.includes(:apartment_attachments)
+    search_data = Apartment.all.includes(:apartment_attachments)
 
-    apartments = search_data.where('category like ?', "%#{category.split('')[0]}%") if category.present?
+    results_a = search_data.where('category like ?', "#{category[0]}%") if category.present?
 
-    address_las = address.length - 1
+    address_last_index = address.length - 1
     if address.present?
-      apartments = search_data.where(
-        'address like ?', "%#{address.split('')[0] + '%' +
-      address.split('')[address_las]}%"
+      val_a = address[0]
+      val_b = address[address_last_index]
+
+      results_b = search_data.where(
+        'address like ?', "%#{val_a + '%' + val_b}%"
       )
     end
 
-    apartments = search_data.where('price >= ?', min_price) if min_price.present?
-    apartments = search_data.where('price <= ?', max_price) if max_price.present?
+    results_c = search_data.where('price >= ?', min_price) if min_price.present?
+    results_d = search_data.where('price <= ?', max_price) if max_price.present?
 
-    apartments if apartments.present?
+    results_a || results_b || results_c || results_d
   end
 
   def no_nulls

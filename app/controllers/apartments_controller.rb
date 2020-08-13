@@ -29,7 +29,7 @@ class ApartmentsController < ApplicationController
 
       else
         flash.alert = @apartment.errors.full_messages[0]
-        format.html { render action 'index' }
+        format.html { render 'index' }
       end
     end
   end

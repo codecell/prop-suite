@@ -1,7 +1,9 @@
 module ApartmentsHelper
   def apartment_params
-    params.require(:apartment).permit(:category, :price, :address,
-                            apartment_attachments_attributes: %i[id apartment_id apartmentphoto])
+    params.require(:apartment).permit(
+      :category, :price, :address,
+      apartment_attachments_attributes: %i[id apartment_id apartmentphoto]
+    )
   end
 
   # markup-structure:
