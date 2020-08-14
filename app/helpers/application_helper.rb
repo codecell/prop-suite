@@ -1,4 +1,13 @@
 module ApplicationHelper
+  def current_user_followers
+    followings_arr = current_user.followings.to_a
+
+    follwed_ids = []
+    followings_arr.each {|f| follwed_ids << f.followed_id }
+
+    follwed_ids
+  end
+  
   def previous_page
     link_to(:back) do
       content_tag :div, class: 'prev-page-link' do

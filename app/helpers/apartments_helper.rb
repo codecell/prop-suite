@@ -100,5 +100,5 @@ module ApartmentsHelper
 
       album_container + showpage_details
     end
-  end
+  end  
 end

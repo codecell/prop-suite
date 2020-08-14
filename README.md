@@ -1,7 +1,7 @@
 ![Linters](https://github.com/codecell/prop-suite/workflows/Linters/badge.svg)
 
 # Prop-suite
-This is a platform where clients can check for available property(apartment) postings, contact the sellers, then review the sellers after a transaction. The app's original theme both in design and functionaly is built to mimic [Twitter](https://www.twitter.com), so users also have to option to follow other users. The app is mobile-responsive.
+This is a platform where clients can check for available property(apartment) postings, contact the sellers, then review the sellers after a transaction. The app's original theme both in design and functionality is built to mimic [Twitter](https://www.twitter.com), so users also have to option to follow other users. The app is mobile-responsive.
 
 ## Outline
 - [Live version](#Live-version)
@@ -64,13 +64,15 @@ Follow the steps below to setup a local development environment. First ensure yo
 
 1. Clone the repository from a terminal 
     ```git clone https://github.com/codecell/prop-suite```.
-2. Navigate to the project directory
+2. Navigate to the project directory.
     ```cd prop-suite```
-3. Install project dependencies
+3. Install project dependencies.
     ```bundle install```
-4. Start the rails server
+4. Run the migrations to setup the tables.
+    ```rails db:migrate```
+5. Start the rails server.
     ```rails server```
-5. Visit localhost:3000 and Voila!!!
+6. Visit localhost:3000 and Voila!!!.
 
 ## Entity Relationship Diagram
    |           |
@@ -82,7 +84,7 @@ Follow the steps below to setup a local development environment. First ensure yo
 EndPoint                       |   Functionality
 -------------------------------|------------------------
 POST /users/sign_up            |   Allows a client to create an account.
-POST /users/sign_in            |   signs in a user into their account(session).
+POST /users/sign_in            |   Signs in a user into their account(session).
 
 ### Users
 EndPoint                       |   Functionality

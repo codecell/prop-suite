@@ -1,17 +1,5 @@
 <div class="cover-image-container">
-  <div class="image-frame">
-    <%= link_to edit_user_registration_path do %>
-      <% if @user.coverphoto.url.present? %>
-        <%= cl_image_tag(@user.coverphoto.url, :height=>250,
-        :fetch_format=>:auto, :quality=>"auto", :use_root_path=>true,
-        :class => "cover-photo", :alt => "cover photo") %>
-      <% else %>
-        <div class="cover-placeholder">
-          <i class="fa fa-picture-o coverimage-frame-icon"></i>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+  <%= render_coverphoto %>
 
   <div class="show-user-details">
     <div class="user-show-avatar-zone">
@@ -31,26 +19,17 @@
       </div>
 
       <div>
-        <h4><%= @user.fullname %></h4>
-        <small>@<%= @user.username %></small>
+        <h4><%= render_userpage_fullname %></h4>
+        <small>@<%= render_userpage_username %></small>
       </div>
     </div>
 
     <div class="dashbord-followers-zone">
       <div>
-        <%= link_to user_reviews_path(@user, @reviews) do %>
-          <h4 class="reviews-count"><%= @user.inverse_reviews.count %> </h4>
-          <p>Reviews</p>
-        <% end %>
+        <%= render_userpage_reviews_link %>
       </div>
-      <div>
-        <h4><%= @user.followings.count %></h4>
-        <p>Following</p>
-      </div>
-      <div>
-        <h4><%= @user.inverse_followings.count %></h4>
-        <p>Followers</p>
-      </div>
+      <%= render_userpage_followings %>
+      <%= render_userpage_followers %>
     </div>
   </div>
 </div>
