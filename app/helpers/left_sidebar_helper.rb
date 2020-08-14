@@ -1,15 +1,14 @@
 module LeftSidebarHelper
   def render_currentuser_avatar_link
-    link_to edit_user_registration_path, class: "sidebar-icon-link" do
-      content_tag :div, class: "avatar-frame" do
+    link_to edit_user_registration_path, class: 'sidebar-icon-link' do
+      content_tag :div, class: 'avatar-frame' do
         if current_user && current_user.avatar.url.present?
-          cl_image_tag(current_user.avatar.url, :width=>96, :height=>96,
-           :fetch_format=>:auto, :quality=>"auto", :use_root_path=>true,
-           :class => "current-user-avatar"
-          )
+          cl_image_tag(current_user.avatar.url, width: 96, height: 96,
+           fetch_format: :auto, quality: 'auto', use_root_path: true,
+           class: 'current-user-avatar')
         else
           content_tag :div do
-            content_tag :i, class: "fa fa-user-circle user-icon" do;end
+            content_tag :i, class: 'fa fa-user-circle user-icon' do; end
           end
         end
       end
@@ -65,11 +64,11 @@ module LeftSidebarHelper
   end
 
   def render_profile_link
-    if current_user 
+    if current_user
       link_to(edit_user_registration_path) do
         content_tag :li do
           profile_icon = content_tag :i, class: 'fas fa-user sidebar-user-icon' do; end
-  
+
           profile_icon + 'Profile'
         end
       end
