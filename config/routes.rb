@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :reviews, only: [:create, :show, :index]
   end
-  resources :searches, only: [:new, :create, :show]
   resources :apartments, only: [:new, :create, :show, :edit, :update, :destroy, :index]
+  resources :searches, only: [:new, :create, :show]
   resources :followings, only: [:new,:index, :show, :create, :edit, :update, :destroy]
 end

@@ -9,6 +9,7 @@ This is a platform where clients can check for available property(apartment) pos
 - [Features](#Features)
 - [Technologies used](#Technologies)
 - [Installation](#Installation)
+    - [cloudinary setup](#Cloudinary-setup)
 - [Entity Relationship Diagram(ERD)](#Entity-Relationship-Diagram)
 - [Endpoints](#endpoints)
     - auth
@@ -73,6 +74,11 @@ Follow the steps below to setup a local development environment. First ensure yo
 5. Start the rails server.
     ```rails server```
 6. Visit localhost:3000 and Voila!!!.
+
+    # Cloudinary setup
+        All image uploads are hosted on [Cloudinary](https://cloudinary.com/), so ensure to register for an account(registration is free).
+        - After registration copy your cloud-name, api-secret and api-key into config/application.yml, I left a sample in config/application_sample.yml.
+        - Please do not expose your cloudinary credentials to the public so ensure to place the config/application.yml into the .gitignore file.
 
 ## Entity Relationship Diagram
    |           |

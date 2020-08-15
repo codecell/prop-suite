@@ -15,6 +15,18 @@ module LeftSidebarHelper
     end
   end
 
+  def render_owner_apartments_link
+    if current_user
+      link_to(user_path(current_user)) do
+        content_tag :li do
+          archive_icon = content_tag :i, class: 'fa fa-house-user' do; end
+
+          archive_icon + 'My apartments'
+        end
+      end
+    end
+  end
+
   def render_current_usernames
     content_tag :div, class: 'sidebar-current-user' do
       if current_user

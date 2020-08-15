@@ -53,12 +53,45 @@ module ApartmentsHelper
     end
   end
 
+  def render_selected_apartment_details(rental)
+    content_tag :div, class: 'showpage-apartment-unit-details' do
+      item1 = content_tag(:small) do
+        content_tag(:span, "Address:  #{rental.address}")
+      end
+
+      item2 = content_tag(:small) do
+        content_tag(:span, "Category:  #{rental.category}")
+      end
+
+      item3 = content_tag(:small) do
+        content_tag(:span, "Price(£): #{rental.price}")
+      end
+
+      item4 = content_tag(:small) do
+        content_tag(:span, "Agent: #{apartment_creator(rental)}")
+      end
+
+      item5 = content_tag(:small) do
+        content_tag(:span, "Phone: #{apartment_creator_contact(rental)}")
+      end
+
+      item6 = content_tag(:small) do
+        content_tag(:span, "Date Posted: #{rental.created_at.strftime('%Y/%m/%d')}")
+      end
+
+      item7 = content_tag(:small) do
+        previous_page
+      end
+
+      item1 + item2 + item3 + item4 + item5 + item6 + item7
+    end
+  end
+
   # structure:
   # .showpage-apartment-unit >
   #   .showpage-apartmentphotos-frame > .apartment-image
   #   .showpage-apartment-unit-details >
   #      small tags > span
-
   def show_selected_apartment
     content_tag :div, class: 'showpage-apartment-unit' do
       if @apartment.apartment_attachments.count.positive?
@@ -70,33 +103,7 @@ module ApartmentsHelper
         end
       end
 
-      showpage_details = content_tag :div, class: 'showpage-apartment-unit-details' do
-        item1 = content_tag(:small) do
-          content_tag(:span, "Address:  #{@apartment.address}")
-        end
-
-        item2 = content_tag(:small) do
-          content_tag(:span, "Category:  #{@apartment.category}")
-        end
-
-        item3 = content_tag(:small) do
-          content_tag(:span, "Price(£): #{@apartment.price}")
-        end
-
-        item4 = content_tag(:small) do
-          content_tag(:span, "Agent: #{apartment_creator(@apartment)}")
-        end
-
-        item5 = content_tag(:small) do
-          content_tag(:span, "Phone: #{apartment_creator_contact(@apartment)}")
-        end
-
-        item6 = content_tag(:small) do
-          previous_page
-        end
-
-        item1 + item2 + item3 + item4 + item5 + item6
-      end
+      showpage_details = render_selected_apartment_details(@apartment)
 
       album_container + showpage_details
     end

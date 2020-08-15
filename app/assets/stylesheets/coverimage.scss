@@ -8,7 +8,7 @@ $primary: #53A7E8;
   height: 250px;
   border-bottom: 1.2px solid $borderColor;
   display: flex;
-  position: fixed;
+  position: absolute;
   top: 80px;
   left: 0%;
   z-index: 50;
@@ -32,11 +32,14 @@ $primary: #53A7E8;
   }
 
   .show-user-details {
-    width: 25%;
-    height: 100%;
+    width: 20%;
+    height: 250px;
     border-left: 1.2px solid $borderColor;
     background-color: $offwhite;
     color: $darkText;
+    position: fixed;
+    right: 0;
+    top: 80px;
   }
 }
 

@@ -3,7 +3,7 @@ class ApartmentsController < ApplicationController
   before_action :authenticate_user!, only: %i[new edit create update delete]
 
   def index
-    @apartments = !Apartment.all.empty? && Apartment.all.ordered_by_most_recent.includes(:apartment_attachments)
+    @apartments = Apartment.all.ordered_by_most_recent.includes(:apartment_attachments)
   end
 
   def new

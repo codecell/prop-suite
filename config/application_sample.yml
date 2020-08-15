@@ -1,0 +1,18 @@
+development:
+  cloud_name: sample_cloud_name
+  api_key: 'samplekey_in_numbers'
+  api_secret: sample_secret
+  enhance_image_tag: "true"
+  static_file_support: "false"
+production:
+  cloud_name: sample_cloud_name
+  api_key: 'samplekey_in_numbers'
+  api_secret: sample_secret
+  enhance_image_tag: "true"
+  static_file_support: "true"
+test:
+  cloud_name: sample_cloud_name
+  api_key: 'samplekey_in_numbers'
+  api_secret: sample_secret
+  enhance_image_tag: "true"
+  static_file_support: "false"

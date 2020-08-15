@@ -1,11 +1,23 @@
 module ApplicationHelper
+  def render_flash_messages
+    if notice
+      content_tag :div, class: 'alert-success' do
+        content_tag(:p, notice)
+      end
+    elsif alert
+      content_tag :div, class: 'alert-danger' do
+        content_tag(:p, alert)
+      end
+    end
+  end
+
   def current_user_followers
-    followings_arr = current_user.followings.to_a
+    followings_arr = current_user.followings.to_a if current_user
 
-    follwed_ids = []
-    followings_arr.each { |f| follwed_ids << f.followed_id }
+    followed_ids = []
+    current_user && followings_arr.each { |f| followed_ids << f.followed_id }
 
-    follwed_ids
+    followed_ids
   end
 
   def previous_page

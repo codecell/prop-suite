@@ -1,6 +1,14 @@
 <div class="user-page-smaller_topbar">
   <a href=""></a>
-  <%= link_to 'LATEST DEALS', apartments_path, class: "smaller-topbar-link" %>
+  <div data-controller="toggler" class="smaller-topbar-link user-page-ap-form">
+    <button
+      class="btn-data-action-new-apartment"
+      data-action="click->toggler#opencanvas"
+    >ADD NEW APARTMENT</button>
+      <span data-target="toggler.canvas" class="d-none">
+        <%= render 'apartments/apartment_form' %>
+      </span>
+  </div>
   <div class = "smaller-topbar-link" >
     <i class="fa fa-envelope envelope-icon"></i>propsuite@domain.com
   </div>

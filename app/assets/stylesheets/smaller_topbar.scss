@@ -22,7 +22,9 @@ $offwhite: #efefef;
 }
 
 .user-page-smaller_topbar {
-  top: 330px;
+  position: absolute;
+  top: 200px;
+  left: 0;
 }
 
 .smaller-topbar-link {

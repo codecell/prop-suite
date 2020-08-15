@@ -35,6 +35,7 @@ input:focus {
 body {
   position: relative;
   overflow-x: hidden;
+  background-color: #efefef;
 }
 
 .alert-success,

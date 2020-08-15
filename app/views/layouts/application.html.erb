@@ -26,19 +26,7 @@
     <div>
       <%= render 'navbar/mobile_nav' %>
     </div>
-
-      <% if notice %>
-            <div class="alert-success">
-          <p> <%= notice %> </p>
-        </div>
-      <% end %>
-
-      <% if alert %>
-        <div class="alert-danger">
-          <p> <%= alert %> </p>
-        </div>
-      <% end %>
-
+      <%= render_flash_messages %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
     <%= yield %>
   </body>

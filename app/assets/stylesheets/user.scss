@@ -71,6 +71,29 @@ $offwhite: #efefef;
   display: flex;
 }
 
+.owner-apartments-heading {
+  font-family: 'Roboto', 'Sans-serif';
+  padding-top: 1em;
+  font-weight: 400;
+}
+
+.current-user-aparments, .no-apartments-yet {
+  position: absolute;
+  left: 0;
+  top: 250px;
+  text-align: center;
+  background-color: $offwhite;
+}
+
+.no-apartments-yet {
+  width: 100%;
+}
+
+.user-page-ap-form {
+  z-index: 200;
+  padding-bottom: 1.5em;;
+}
+
 // <<<< USERS INDEX PAGE >>>> strictly for mobile screen range
 .usersindex-who-to-follow-wrapper {
   width: 30%;
