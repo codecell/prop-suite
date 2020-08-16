@@ -2,7 +2,7 @@ $custom_white: #cac5c5;
 $customNavy: #213346;
 
 .mobile-sidebar-container {
-  height: 100vh;
+  min-height: 100%;
   position: fixed;
   left: 0;
   top: 80px;
