@@ -15,11 +15,11 @@ module CoverphotoZoneHelper
   end
 
   def render_userpage_username
-    @user.fullname
+    @user.username
   end
 
   def render_userpage_fullname
-    @user.username
+    @user.fullname.capitalize
   end
 
   def render_userpage_reviews_link

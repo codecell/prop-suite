@@ -38,8 +38,4 @@ class ApartmentsController < ApplicationController
     @apartment = Apartment.find_by_id(params[:id])
     @apartment_attachments = @apartment.apartment_attachments.all
   end
-
-  def edit
-    @apartment = Apartment.find_by_id(params[:id])
-  end
 end
