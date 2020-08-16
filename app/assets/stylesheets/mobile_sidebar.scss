@@ -2,8 +2,8 @@ $custom_white: #cac5c5;
 $customNavy: #213346;
 
 .mobile-sidebar-container {
-  min-height: 100%;
-  position: fixed;
+  min-height: 100vh;
+  position: absolute;
   left: 0;
   top: 80px;
   background-color: $customNavy;
@@ -24,7 +24,7 @@ $customNavy: #213346;
   // backdrop
   &::after {
     content: '';
-    height: 100vh;
+    min-height: 100vh;
     position: fixed;
     right: 0;
     top: 80px;
