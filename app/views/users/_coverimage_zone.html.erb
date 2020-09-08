@@ -12,8 +12,10 @@
           <%= render_coverimage_zone_avatar(@user) %>
 
           <div>
-            <%= link_to user_reviews_path(@user, @reviews) do %>
-              <button class="btn-review-cover-img">Add Review</button>
+            <% if @user && @user != current_user %>
+              <%= link_to user_reviews_path(@user, @reviews) do %>
+                <button class="btn-review-cover-img">Add Review</button>
+              <% end %>
             <% end %>
           </div> 
       </div>

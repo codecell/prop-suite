@@ -67,13 +67,15 @@ Follow the steps below to setup a local development environment. First ensure yo
     ```git clone https://github.com/codecell/prop-suite```.
 2. Navigate to the project directory.
     ```cd prop-suite```
-3. Install project dependencies.
+3. Install project Ruby/Rails dependencies.
     ```bundle install```
-4. Run the migrations to setup the tables.
+4. Install Javascript dependencies.
+    ```yarn install```
+5. Run the migrations to setup the tables.
     ```rails db:migrate```
-5. Start the rails server.
+6. Start the rails server.
     ```rails server```
-6. Visit localhost:3000 and Voila!!!.
+7. Visit localhost:3000 and Voila!!!.
 
 ## Cloudinary setup
 All image uploads are hosted on [Cloudinary](https://cloudinary.com/), so ensure to register for an account(registration is free).
