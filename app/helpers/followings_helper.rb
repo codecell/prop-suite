@@ -15,7 +15,7 @@ module FollowingsHelper
 
     if current_user && followers_array.include?(current_user.id)
       content_tag(:p, 'following', class: 'already-following')
-    else
+    elsif current_user != @user
       content_tag :div do
         render 'followings/following_form'
       end

@@ -97,15 +97,18 @@ module ApartmentsHelper
       if @apartment.apartment_attachments.count.positive?
         album_container = content_tag :div, class: 'showpage-apartmentphotos-frame' do
           @apartment.apartment_attachments.each do |pic|
-            concat(cl_image_tag(pic.apartmentphoto.url, width: 400, height: 100, fetch_format: :auto, quality: 'auto',
-                                                        use_root_path: true, class: 'apartment-image'))
+            pic.apartmentphoto.url && concat(
+              cl_image_tag(pic.apartmentphoto.url, width: 400,
+                height: 100, fetch_format: :auto, quality: 'auto',
+                use_root_path: true, class: 'apartment-image')
+            )
           end
         end
+
+        showpage_details = render_selected_apartment_details(@apartment)
+
+        album_container + showpage_details
       end
-
-      showpage_details = render_selected_apartment_details(@apartment)
-
-      album_container + showpage_details
     end
   end
 end
