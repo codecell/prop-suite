@@ -102,7 +102,7 @@ module UsersHelper
   # Mobile page WHO TO FOLLOW (users#index)
   def who_to_follow
     content_tag :ul do
-      User.all.ordered_by_most_recent[0..9].each do |user|
+      User.all.ordered_by_most_recent[0..6].each do |user|
         next unless user != current_user && !current_user_followers.include?(user.id)
 
         user_row_link = link_to user_path(user), class: 'who-to-follow-link' do

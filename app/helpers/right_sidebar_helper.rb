@@ -3,7 +3,7 @@ module RightSidebarHelper
     usersdata = User.all.includes(:reviews, :followings).ordered_by_most_recent
 
     content_tag :ul do
-      usersdata[0..9].each do |user|
+      usersdata[0..6].each do |user|
         next unless user != current_user && !current_user_followers.include?(user.id)
 
         user_item = link_to user_path(user), class: 'who-to-follow-link' do
